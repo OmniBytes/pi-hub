@@ -1,4 +1,7 @@
 import _jiti from "jiti";
+import nPwa from "next-pwa";
+
+import { nextConfig } from "@omnibytes/next-config";
 
 const jiti = _jiti(new URL(import.meta.url).pathname);
 
@@ -8,20 +11,12 @@ jiti("@omnibytes/auth/env");
 
 /** @type {import("next").NextConfig} */
 const config = {
-  reactStrictMode: true,
-
-  /** Enables hot reloading for local packages without a build step */
-  transpilePackages: [
-    "@omnibytes/api",
-    "@omnibytes/auth",
-    "@omnibytes/db",
-    "@omnibytes/ui",
-    "@omnibytes/validators",
-  ],
-
-  /** We already do linting and typechecking as separate tasks in CI */
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
+  ...nextConfig,
 };
 
-export default config;
+const withPWA = nPwa({
+  dest: "public",
+  disable: process.env.NODE_ENV === "development",
+});
+
+export default withPWA(config);
