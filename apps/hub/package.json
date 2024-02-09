@@ -24,6 +24,7 @@
     "@trpc/client": "11.0.0-next-beta.264",
     "@trpc/react-query": "11.0.0-next-beta.264",
     "@trpc/server": "11.0.0-next-beta.264",
+    "@vercel/speed-insights": "^1.0.9",
     "geist": "^1.2.2",
     "next": "^14.1.0",
     "react": "18.2.0",
