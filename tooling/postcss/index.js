@@ -1,5 +1,5 @@
 /** @type {import('postcss').Config} */
-export const postcssConfig = {
+const postcssConfig = {
   plugins: {
     "postcss-import": {},
     "postcss-flexbugs-fixes": {},
@@ -18,3 +18,5 @@ export const postcssConfig = {
     tailwindcss: {},
   },
 };
+
+module.exports = { postcssConfig };

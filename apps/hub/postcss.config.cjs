@@ -1,4 +1,4 @@
-import { postcssConfig } from "@omnibytes/postcss-config";
+const { postcssConfig } = require("@omnibytes/postcss-config");
 
 /**@type {import('postcss').Config} */
 module.exports = {
