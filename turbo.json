@@ -28,7 +28,11 @@
       "dependsOn": ["^topo"],
       "outputs": ["node_modules/.cache/.eslintcache"]
     },
-    "typecheck": {
+    "style": {
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/.stylelintcache"]
+    },
+    "type-check": {
       "dependsOn": ["^topo"],
       "outputs": ["node_modules/.cache/tsbuildinfo.json"]
     },
@@ -41,8 +45,8 @@
   },
   "globalEnv": [
     "DATABASE_URL",
-    "AUTH_DISCORD_ID",
-    "AUTH_DISCORD_SECRET",
+    "AUTH_GOOGLE_CLIENT_ID",
+    "AUTH_GOOGLE_CLIENT_SECRET",
     "AUTH_REDIRECT_PROXY_URL",
     "AUTH_SECRET"
   ]

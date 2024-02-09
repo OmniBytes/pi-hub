@@ -1,10 +1,10 @@
 {
-  "name": "@omnibytes/next-config",
+  "name": "@omnibytes/stylelint-config",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "exports": {
-    ".": "./index.mjs"
+    ".": "./index.js"
   },
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
@@ -12,7 +12,9 @@
     "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
-    "next": "^14.1.0"
+    "stylelint": "^16.2.1",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-standard": "^36.0.0"
   },
   "devDependencies": {
     "@omnibytes/prettier-config": "workspace:^0.1.0",

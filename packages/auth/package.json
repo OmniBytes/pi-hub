@@ -12,11 +12,11 @@
     "clean": "rm -rf .turbo node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
-    "@omnibytes/db": "workspace:^0.1.0",
     "@auth/drizzle-adapter": "^0.6.3",
+    "@omnibytes/db": "workspace:^0.1.0",
     "@t3-oss/env-nextjs": "^0.9.2",
     "next": "^14.1.0",
     "next-auth": "5.0.0-beta.9",

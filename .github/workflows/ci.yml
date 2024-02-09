@@ -31,7 +31,7 @@ jobs:
         shell: bash
         run: cp .env.example .env
 
-      - name: Lint
+      - name: 🧶 Lint
         run: pnpm lint && pnpm lint:ws
 
   format:
@@ -42,10 +42,10 @@ jobs:
       - name: Setup
         uses: ./tooling/github/setup
 
-      - name: Format
+      - name: 💎 Format
         run: pnpm format
 
-  typecheck:
+  style:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -53,5 +53,16 @@ jobs:
       - name: Setup
         uses: ./tooling/github/setup
 
-      - name: Typecheck
-        run: pnpm typecheck
+      - name: 🎩 Style
+        run: pnpm style
+
+  type-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./tooling/github/setup
+
+      - name: 🦺 Type Check
+        run: pnpm type-check

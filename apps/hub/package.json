@@ -4,14 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "pnpm with-env next build",
-    "clean": "git clean -xdf .next .turbo node_modules",
     "dev": "pnpm with-env next dev",
+    "build": "pnpm with-env next build",
+    "start": "pnpm with-env next start",
+    "with-env": "dotenv -e ../../.env --",
+    "quality:---": "-----------------------------",
+    "clean": "git clean -xdf .next .turbo node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "dotenv -v SKIP_ENV_VALIDATION=1 next lint",
-    "start": "pnpm with-env next start",
-    "typecheck": "tsc --noEmit",
-    "with-env": "dotenv -e ../../.env --"
+    "style": "stylelint '.src/**/*.css' --ignore-path ../../.gitignore --allow-empty-input",
+    "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
     "@omnibytes/api": "workspace:^0.1.0",
@@ -35,10 +37,12 @@
   "devDependencies": {
     "@omnibytes/eslint-config": "workspace:^0.2.0",
     "@omnibytes/next-config": "workspace:^0.1.0",
+    "@omnibytes/postcss-config": "workspace:^0.1.0",
     "@omnibytes/prettier-config": "workspace:^0.1.0",
+    "@omnibytes/stylelint-config": "workspace:^0.1.0",
     "@omnibytes/tailwind-config": "workspace:^0.1.0",
     "@omnibytes/tsconfig": "workspace:^0.1.0",
-    "@types/node": "^20.11.13",
+    "@types/node": "^20.11.17",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "dotenv-cli": "^7.3.0",
@@ -46,6 +50,7 @@
     "jiti": "^1.21.0",
     "next-pwa": "^5.6.0",
     "prettier": "^3.2.5",
+    "stylelint": "^16.2.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   },
@@ -57,5 +62,8 @@
       "@omnibytes/eslint-config/react"
     ]
   },
-  "prettier": "@omnibytes/prettier-config"
+  "prettier": "@omnibytes/prettier-config",
+  "stylelint": {
+    "extends": "@omnibytes/stylelint-config"
+  }
 }
