@@ -1,0 +1,25 @@
+{
+  "name": "@omnibytes/stylelint-config",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "stylelint": "^16.2.1",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-standard": "^36.0.0"
+  },
+  "devDependencies": {
+    "@omnibytes/prettier-config": "workspace:^0.1.0",
+    "@omnibytes/tsconfig": "workspace:^0.1.0",
+    "typescript": "^5.3.3"
+  },
+  "prettier": "@omnibytes/prettier-config"
+}

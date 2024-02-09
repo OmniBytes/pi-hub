@@ -18,7 +18,8 @@
     "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
     "lint:ws": "pnpm dlx sherif@latest",
     "postinstall": "pnpm lint:ws",
-    "typecheck": "turbo typecheck"
+    "typecheck": "turbo typecheck",
+    "up-deps": "pnpm upgrade --latest -r && pnpm dedupe"
   },
   "devDependencies": {
     "@omnibytes/prettier-config": "workspace:^0.1.0",
