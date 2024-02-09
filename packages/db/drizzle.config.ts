@@ -16,5 +16,5 @@ export default {
   schema: "./src/schema",
   driver: "mysql2",
   dbCredentials: { uri },
-  tablesFilter: ["t3turbo_*"],
+  tablesFilter: ["pi-hub_*"],
 } satisfies Config;
