@@ -1,0 +1,82 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": "./",
+    },
+    {
+      "name": "apps",
+      "path": "./apps",
+    },
+    {
+      "name": "packages",
+      "path": "./packages",
+    },
+    {
+      "name": "tooling",
+      "path": "./tooling",
+    },
+  ],
+
+  "settings": {
+    "npm.packageManager": "pnpm",
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "never",
+      "source.addMissingImports": "explicit",
+
+      "source.fixAll": "explicit",
+    },
+
+    "editor.rulers": [100],
+
+    "vitest.enable": true,
+    "vitest.commandLine": "pnpm test",
+    "vitest.showFailMessages": true,
+
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/*.code-search": true,
+      "**/pnpm-lock.yaml": true,
+      "**/coverage": true,
+      "**/dist": true,
+      "**/build": true,
+      "**/.next": true,
+      "**/.turbo": true,
+    },
+  },
+
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "expo.vscode-expo-tools",
+      "esbenp.prettier-vscode",
+      "yoavbls.pretty-ts-errors",
+      "bradlc.vscode-tailwindcss",
+
+      "eamodia.gitlens",
+      "ms-playwright.playwright",
+      "aaron-bond.better-comments",
+      "streetsidesoftware.cspell-checker",
+      "adpyke.codesnap",
+      "ms-asuretools.vscode-docker",
+      "mikestead.dotenv",
+      "usernamehw.errorlens",
+      "wix.vscode-import-cost",
+      "liamhammett.inline-parameters",
+      "quick-lint.quick-lint-js",
+      "ms-vscode-remote.vscode-remote-exensionpack",
+      "stylelint.vscode-stylelint",
+      "stepsize.tech-debt-tracker",
+      "gruntfuggly.todo-tree",
+      "zlixuanchen.vitest-explorer",
+      "redhat.vscode-yaml",
+
+      "VisualStudioExptTeam.vscodeintellicode",
+      "VisualStudioExptTeam.vscodeintellicode-completions",
+      "VisualStudioExptTeam.intellicode-api-usage-examples",
+    ],
+  },
+}
