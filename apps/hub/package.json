@@ -37,6 +37,7 @@
     "@omnibytes/next-config": "workspace:^0.1.0",
     "@omnibytes/postcss-config": "workspace:^0.1.0",
     "@omnibytes/prettier-config": "workspace:^0.1.0",
+    "@omnibytes/stylelint-config": "workspace:^0.1.0",
     "@omnibytes/tailwind-config": "workspace:^0.1.0",
     "@omnibytes/tsconfig": "workspace:^0.1.0",
     "@types/node": "^20.11.17",
@@ -58,5 +59,8 @@
       "@omnibytes/eslint-config/react"
     ]
   },
-  "prettier": "@omnibytes/prettier-config"
+  "prettier": "@omnibytes/prettier-config",
+  "stylelint": {
+    "extends": "@omnibytes/stylelint-config"
+  }
 }

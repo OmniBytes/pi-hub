@@ -239,6 +239,9 @@ importers:
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/prettier
+      '@omnibytes/stylelint-config':
+        specifier: workspace:^0.1.0
+        version: link:../../tooling/stylelint
       '@omnibytes/tailwind-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/tailwind
