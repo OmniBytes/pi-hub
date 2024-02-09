@@ -35,6 +35,7 @@
   "devDependencies": {
     "@omnibytes/eslint-config": "workspace:^0.2.0",
     "@omnibytes/next-config": "workspace:^0.1.0",
+    "@omnibytes/postcss-config": "workspace:^0.1.0",
     "@omnibytes/prettier-config": "workspace:^0.1.0",
     "@omnibytes/tailwind-config": "workspace:^0.1.0",
     "@omnibytes/tsconfig": "workspace:^0.1.0",

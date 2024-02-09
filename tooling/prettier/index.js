@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 /** @typedef {import("@ianvs/prettier-plugin-sort-imports").PluginConfig} SortImportsConfig */
 
 /** @type { PrettierConfig | SortImportsConfig | TailwindConfig } */
-const config = {
+const prettierConfig = {
   plugins: [
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss",
@@ -33,4 +33,4 @@ const config = {
   importOrderTypeScriptVersion: "4.4.0",
 };
 
-export default config;
+export default prettierConfig;

@@ -1,7 +1,7 @@
 const camelCase = "^[a-zA-Z][a-zA-Z0-9]*$";
 
 /** @type {import('stylelint').Config} */
-export const stylelintConfig = {
+const stylelintConfig = {
   extends: ["stylelint-config-standard", "stylelint-config-idiomatic-order"],
 
   rules: {
@@ -25,3 +25,5 @@ export const stylelintConfig = {
     ],
   },
 };
+
+export default stylelintConfig;

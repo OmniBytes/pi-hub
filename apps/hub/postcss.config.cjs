@@ -1,6 +1,6 @@
+import { postcssConfig } from "@omnibytes/postcss-config";
+
+/**@type {import('postcss').Config} */
 module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
+  ...postcssConfig,
 };

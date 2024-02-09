@@ -14,5 +14,7 @@ export const postcssConfig = {
         variables: {},
       },
     },
+
+    tailwindcss: {},
   },
 };

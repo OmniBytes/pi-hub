@@ -233,6 +233,9 @@ importers:
       '@omnibytes/next-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/next
+      '@omnibytes/postcss-config':
+        specifier: workspace:^0.1.0
+        version: link:../../tooling/postcss
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/prettier
@@ -569,6 +572,9 @@ importers:
       postcss-simple-vars:
         specifier: ^7.0.1
         version: 7.0.1(postcss@8.4.35)
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.1
     devDependencies:
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
