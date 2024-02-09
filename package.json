@@ -19,7 +19,7 @@
     "lint:ws": "pnpm dlx sherif@latest",
     "postinstall": "pnpm lint:ws",
     "typecheck": "turbo typecheck",
-    "up-deps": "pnpm upgrade --latest -r && pnpm dedupe"
+    "up-deps": "pnpm upgrade --interactive --latest -r && pnpm dedupe"
   },
   "devDependencies": {
     "@omnibytes/prettier-config": "workspace:^0.1.0",

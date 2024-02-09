@@ -1,0 +1,27 @@
+{
+  "name": "@omnibytes/postcss-config",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^9.3.0",
+    "postcss-simple-vars": "^7.0.1"
+  },
+  "devDependencies": {
+    "@omnibytes/prettier-config": "workspace:^0.1.0",
+    "@omnibytes/tsconfig": "workspace:^0.1.0",
+    "typescript": "^5.3.3"
+  },
+  "prettier": "@omnibytes/prettier-config"
+}
