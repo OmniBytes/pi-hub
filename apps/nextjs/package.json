@@ -1,5 +1,5 @@
 {
-  "name": "@acme/nextjs",
+  "name": "@omnibytes/nextjs",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -14,11 +14,11 @@
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
-    "@acme/api": "workspace:^0.1.0",
-    "@acme/auth": "workspace:^0.1.0",
-    "@acme/db": "workspace:^0.1.0",
-    "@acme/ui": "workspace:^0.1.0",
-    "@acme/validators": "workspace:^0.1.0",
+    "@omnibytes/api": "workspace:^0.1.0",
+    "@omnibytes/auth": "workspace:^0.1.0",
+    "@omnibytes/db": "workspace:^0.1.0",
+    "@omnibytes/ui": "workspace:^0.1.0",
+    "@omnibytes/validators": "workspace:^0.1.0",
     "@t3-oss/env-nextjs": "^0.9.2",
     "@tanstack/react-query": "^5.18.1",
     "@trpc/client": "11.0.0-next-beta.264",
@@ -32,10 +32,10 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@acme/eslint-config": "workspace:^0.2.0",
-    "@acme/prettier-config": "workspace:^0.1.0",
-    "@acme/tailwind-config": "workspace:^0.1.0",
-    "@acme/tsconfig": "workspace:^0.1.0",
+    "@omnibytes/eslint-config": "workspace:^0.2.0",
+    "@omnibytes/prettier-config": "workspace:^0.1.0",
+    "@omnibytes/tailwind-config": "workspace:^0.1.0",
+    "@omnibytes/tsconfig": "workspace:^0.1.0",
     "@types/node": "^20.11.13",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
@@ -49,10 +49,10 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@acme/eslint-config/base",
-      "@acme/eslint-config/nextjs",
-      "@acme/eslint-config/react"
+      "@omnibytes/eslint-config/base",
+      "@omnibytes/eslint-config/nextjs",
+      "@omnibytes/eslint-config/react"
     ]
   },
-  "prettier": "@acme/prettier-config"
+  "prettier": "@omnibytes/prettier-config"
 }
