@@ -18,7 +18,7 @@
     "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
     "lint:ws": "pnpm dlx sherif@latest",
     "postinstall": "pnpm lint:ws",
-    "typecheck": "turbo typecheck",
+    "type-check": "turbo type-check",
     "up-deps": "pnpm upgrade --interactive --latest -r && pnpm dedupe"
   },
   "devDependencies": {

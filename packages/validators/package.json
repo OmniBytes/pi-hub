@@ -11,7 +11,7 @@
     "clean": "rm -rf .turbo node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
     "zod": "^3.22.4"

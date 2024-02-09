@@ -45,7 +45,7 @@ jobs:
       - name: Format
         run: pnpm format
 
-  typecheck:
+  type-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -53,5 +53,5 @@ jobs:
       - name: Setup
         uses: ./tooling/github/setup
 
-      - name: Typecheck
-        run: pnpm typecheck
+      - name: type-check
+        run: pnpm type-check
