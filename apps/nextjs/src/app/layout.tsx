@@ -17,8 +17,8 @@ export const metadata: Metadata = {
       ? "https://turbo.t3.gg"
       : "http://localhost:3000",
   ),
-  title: "Create T3 Turbo",
-  description: "Simple monorepo with shared backend for web & mobile apps",
+  title: "Pi Hub",
+  description: "Information Hub",
   openGraph: {
     title: "Create T3 Turbo",
     description: "Simple monorepo with shared backend for web & mobile apps",
@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     site: "@jullerino",
     creator: "@jullerino",
   },
+  applicationName: "Pi Hub",
 };
 
 export const viewport: Viewport = {
@@ -42,6 +43,8 @@ export const viewport: Viewport = {
 export default function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <link rel="manifest" href="/manifest.json" />
+
       <body
         className={cn(
           "min-h-screen bg-background font-sans text-foreground antialiased",
