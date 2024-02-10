@@ -1,27 +1,31 @@
 {
   "name": "Pi Hub",
   "short_name": "pi hub",
-  "icons": [
-    {
-      "src": "/icons/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icons/android-chrome-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png"
-    },
-    {
-      "src": "/icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
+
   "theme_color": "#FFFFFF",
   "background_color": "#FFFFFF",
-  "start_url": "/",
+
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
   "display": "standalone",
-  "orientation": "portrait"
+  "orientation": "portrait",
+
+  "icons": [
+    {
+      "src": "t3-icon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Test",
+      "short_name": "Test",
+      "description": "test desc",
+      "url": "/test?source=pwa",
+      "icons": [{ "src": "t3-icon.svg", "sizes": "96x96" }]
+    }
+  ]
 }
