@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 
-import base from "./base";
+import { addColorVar } from "./add-color-vars";
+import { base } from "./base";
 
 export default {
   content: base.content,
@@ -36,5 +37,5 @@ export default {
       },
     },
   },
-  plugins: [animate],
+  plugins: [animate, addColorVar],
 } satisfies Config;

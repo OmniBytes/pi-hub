@@ -12,7 +12,7 @@ const stylelintConfig = {
       },
     ],
 
-    "declaration-emtpy-line-before": [
+    "declaration-empty-line-before": [
       "always",
       {
         ignore: [

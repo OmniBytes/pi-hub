@@ -1,11 +1,10 @@
 {
-  "name": "@omnibytes/tailwind-config",
+  "name": "@omnibytes/colors",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "exports": {
-    "./native": "./src/native.ts",
-    "./web": "./src/web.ts"
+    ".": "./index.ts"
   },
   "license": "MIT",
   "scripts": {
@@ -13,13 +12,6 @@
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint .",
     "type-check": "tsc --noEmit --pretty"
-  },
-  "dependencies": {
-    "@omnibytes/colors": "workspace:^0.1.0",
-    "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1",
-    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@omnibytes/eslint-config": "workspace:^0.2.0",

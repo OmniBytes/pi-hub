@@ -1,9 +1,11 @@
 import type { Config } from "tailwindcss";
 
-import base from "./base";
+import { addColorVar } from "./add-color-vars";
+import { base } from "./base";
 
 export default {
   content: base.content,
   presets: [base],
+  plugins: [addColorVar],
   theme: {},
 } satisfies Config;

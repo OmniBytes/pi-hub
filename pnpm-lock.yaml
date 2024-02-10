@@ -593,6 +593,27 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
+  tooling/colors:
+    devDependencies:
+      '@omnibytes/eslint-config':
+        specifier: workspace:^0.2.0
+        version: link:../eslint
+      '@omnibytes/prettier-config':
+        specifier: workspace:^0.1.0
+        version: link:../prettier
+      '@omnibytes/tsconfig':
+        specifier: workspace:^0.1.0
+        version: link:../typescript
+      eslint:
+        specifier: ^8.56.0
+        version: 8.56.0
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
   tooling/eslint:
     dependencies:
       '@next/eslint-plugin-next':
@@ -731,6 +752,9 @@ importers:
 
   tooling/tailwind:
     dependencies:
+      '@omnibytes/colors':
+        specifier: workspace:^0.1.0
+        version: link:../colors
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.17(postcss@8.4.35)
