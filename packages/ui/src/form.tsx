@@ -21,19 +21,6 @@ import {
 import { cn } from ".";
 import { Label } from "./label";
 
-function useForm<TSchema extends ZodType>(
-  props: Omit<UseFormProps<TSchema["_input"]>, "resolver"> & {
-    schema: TSchema;
-  },
-) {
-  const form = __useForm<TSchema["_input"]>({
-    ...props,
-    resolver: zodResolver(props.schema, undefined),
-  });
-
-  return form;
-}
-
 const Form = FormProvider;
 
 interface FormFieldContextValue<
@@ -59,6 +46,19 @@ const FormField = <
     </FormFieldContext.Provider>
   );
 };
+
+function useForm<TSchema extends ZodType>(
+  props: Omit<UseFormProps<TSchema["_input"]>, "resolver"> & {
+    schema: TSchema;
+  },
+) {
+  const form = __useForm<TSchema["_input"]>({
+    ...props,
+    resolver: zodResolver(props.schema, undefined),
+  });
+
+  return form;
+}
 
 const useFormField = () => {
   const fieldContext = React.useContext(FormFieldContext);
@@ -155,7 +155,7 @@ const FormDescription = React.forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn("text-[0.8rem] text-muted-foreground", className)}
+      className={cn("text-sm text-muted-foreground", className)}
       {...props}
     />
   );
@@ -177,7 +177,7 @@ const FormMessage = React.forwardRef<
     <p
       ref={ref}
       id={formMessageId}
-      className={cn("text-[0.8rem] font-medium text-destructive", className)}
+      className={cn("text-sm font-medium text-destructive", className)}
       {...props}
     >
       {body}

@@ -5,7 +5,7 @@ import { GeistSans } from "geist/font/sans";
 
 import { cn } from "@omnibytes/ui";
 import { ThemeProvider, ThemeToggle } from "@omnibytes/ui/theme";
-import { Toaster } from "@omnibytes/ui/toast";
+import { Toaster } from "@omnibytes/ui/toaster";
 
 import { env } from "~/env";
 import { TRPCReactProvider } from "~/trpc/react";

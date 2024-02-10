@@ -14,7 +14,7 @@ import {
   useForm,
 } from "@omnibytes/ui/form";
 import { Input } from "@omnibytes/ui/input";
-import { toast } from "@omnibytes/ui/toast";
+// import { toast } from "@omnibytes/ui/toast";
 import { CreatePostSchema } from "@omnibytes/validators";
 
 import { api } from "~/trpc/react";
@@ -34,12 +34,12 @@ export function CreatePostForm() {
       form.reset();
       await utils.post.invalidate();
     },
-    onError: (err) => {
-      toast.error(
-        err?.data?.code === "UNAUTHORIZED"
-          ? "You must be logged in to post"
-          : "Failed to create post",
-      );
+    onError: (_err) => {
+      // toast.error(
+      //   err?.data?.code === "UNAUTHORIZED"
+      //     ? "You must be logged in to post"
+      //     : "Failed to create post",
+      // );
     },
   });
 
@@ -121,12 +121,12 @@ export function PostCard(props: {
     onSuccess: async () => {
       await utils.post.invalidate();
     },
-    onError: (err) => {
-      toast.error(
-        err?.data?.code === "UNAUTHORIZED"
-          ? "You must be logged in to delete a post"
-          : "Failed to delete post",
-      );
+    onError: (_err) => {
+      // toast.error(
+      //   err?.data?.code === "UNAUTHORIZED"
+      //     ? "You must be logged in to delete a post"
+      //     : "Failed to delete post",
+      // );
     },
   });
 
