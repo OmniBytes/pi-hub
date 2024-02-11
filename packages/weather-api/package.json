@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "gen:types": "openapi-typescript https://api.weather.gov/openapi.json -o ./src/types.ts",
-    "qualit:---": "------------------------------",
+    "quality:---": "------------------------------",
     "clean": "rm -rf .turbo node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint .",
