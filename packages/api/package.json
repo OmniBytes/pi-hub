@@ -25,7 +25,7 @@
   "devDependencies": {
     "@omnibytes/eslint-config": "workspace:^0.2.0",
     "@omnibytes/prettier-config": "workspace:^0.1.0",
-    "@omnibytes/tsconfig": "workspace:^0.1.0",
+    "@omnibytes/typescript": "workspace:^0.1.0",
     "eslint": "^8.56.0",
     "openapi-fetch": "^0.8.2",
     "prettier": "^3.2.5",

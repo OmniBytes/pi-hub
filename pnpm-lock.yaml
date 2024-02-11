@@ -39,7 +39,7 @@ importers:
       '@omnibytes/tailwind-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/tailwind
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../../tooling/typescript
       '@types/node':
@@ -151,7 +151,7 @@ importers:
       '@omnibytes/tailwind-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/tailwind
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../../tooling/typescript
       '@types/babel__core':
@@ -248,7 +248,7 @@ importers:
       '@omnibytes/tailwind-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/tailwind
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../../tooling/typescript
       '@types/node':
@@ -315,7 +315,7 @@ importers:
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/prettier
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../../tooling/typescript
       eslint:
@@ -364,7 +364,7 @@ importers:
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/prettier
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../../tooling/typescript
       eslint:
@@ -392,7 +392,7 @@ importers:
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/prettier
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../../tooling/typescript
       dotenv-cli:
@@ -401,6 +401,27 @@ importers:
       drizzle-kit:
         specifier: ^0.20.14
         version: 0.20.14
+      eslint:
+        specifier: ^8.56.0
+        version: 8.56.0
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
+  packages/logger:
+    devDependencies:
+      '@omnibytes/eslint-config':
+        specifier: workspace:^0.2.0
+        version: link:../../tooling/eslint
+      '@omnibytes/prettier-config':
+        specifier: workspace:^0.1.0
+        version: link:../../tooling/prettier
+      '@omnibytes/typescript':
+        specifier: workspace:^0.1.0
+        version: link:../../tooling/typescript
       eslint:
         specifier: ^8.56.0
         version: 8.56.0
@@ -552,7 +573,7 @@ importers:
       '@omnibytes/tailwind-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/tailwind
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../../tooling/typescript
       '@types/react':
@@ -589,7 +610,7 @@ importers:
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/prettier
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../../tooling/typescript
       eslint:
@@ -617,7 +638,7 @@ importers:
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/prettier
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../../tooling/typescript
       eslint:
@@ -641,7 +662,7 @@ importers:
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../prettier
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../typescript
       eslint:
@@ -684,7 +705,7 @@ importers:
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../prettier
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../typescript
       '@types/eslint':
@@ -711,7 +732,7 @@ importers:
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../prettier
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../typescript
       typescript:
@@ -742,7 +763,7 @@ importers:
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../prettier
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../typescript
       typescript:
@@ -761,7 +782,7 @@ importers:
         specifier: ^0.5.11
         version: 0.5.11(@ianvs/prettier-plugin-sort-imports@4.1.1)(prettier@3.2.5)
     devDependencies:
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../typescript
       typescript:
@@ -783,7 +804,7 @@ importers:
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../prettier
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../typescript
       typescript:
@@ -814,7 +835,7 @@ importers:
       '@omnibytes/prettier-config':
         specifier: workspace:^0.1.0
         version: link:../prettier
-      '@omnibytes/tsconfig':
+      '@omnibytes/typescript':
         specifier: workspace:^0.1.0
         version: link:../typescript
       eslint:

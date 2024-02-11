@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@omnibytes/prettier-config": "workspace:^0.1.0",
-    "@omnibytes/tsconfig": "workspace:^0.1.0",
+    "@omnibytes/typescript": "workspace:^0.1.0",
     "@types/eslint": "^8.56.2",
     "eslint": "^8.56.0",
     "prettier": "^3.2.5",

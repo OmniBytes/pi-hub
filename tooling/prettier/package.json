@@ -17,7 +17,7 @@
     "prettier-plugin-tailwindcss": "^0.5.11"
   },
   "devDependencies": {
-    "@omnibytes/tsconfig": "workspace:^0.1.0",
+    "@omnibytes/typescript": "workspace:^0.1.0",
     "typescript": "^5.3.3"
   },
   "prettier": "@omnibytes/prettier-config"
