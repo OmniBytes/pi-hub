@@ -16,6 +16,7 @@
   "dependencies": {
     "@omnibytes/auth": "workspace:^0.1.0",
     "@omnibytes/db": "workspace:^0.1.0",
+    "@omnibytes/weather-api": "workspace:^0.1.0",
     "@omnibytes/validators": "workspace:^0.1.0",
     "@trpc/server": "11.0.0-next-beta.264",
     "superjson": "2.2.1",

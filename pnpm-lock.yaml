@@ -296,6 +296,9 @@ importers:
       '@omnibytes/validators':
         specifier: workspace:^0.1.0
         version: link:../validators
+      '@omnibytes/weather-api':
+        specifier: workspace:^0.1.0
+        version: link:../weather-api
       '@trpc/server':
         specifier: 11.0.0-next-beta.264
         version: 11.0.0-next-beta.264

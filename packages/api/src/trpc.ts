@@ -13,6 +13,7 @@ import { ZodError } from "zod";
 import type { Session } from "@omnibytes/auth";
 import { auth } from "@omnibytes/auth";
 import { db } from "@omnibytes/db";
+import { createWeatherApiClient } from "@omnibytes/weather-api";
 
 /**
  * 1. CONTEXT
@@ -30,14 +31,17 @@ export const createTRPCContext = async (opts: {
   headers: Headers;
   session: Session | null;
 }) => {
-  const session = opts.session ?? (await auth());
   const source = opts.headers.get("x-trpc-source") ?? "unknown";
+  const session = opts.session ?? (await auth());
+  const weatherApi = createWeatherApiClient();
 
   console.log(">>> tRPC Request from", source, "by", session?.user);
 
   return {
     session,
     db,
+
+    weatherApi,
   };
 };
 
