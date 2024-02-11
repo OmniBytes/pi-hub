@@ -1,0 +1,32 @@
+{
+  "name": "@omnibytes/logger",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "quality:---": "------------------------------",
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit --pretty"
+  },
+  "devDependencies": {
+    "@omnibytes/eslint-config": "workspace:^0.2.0",
+    "@omnibytes/prettier-config": "workspace:^0.1.0",
+    "@omnibytes/typescript": "workspace:^0.1.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@omnibytes/eslint-config/base"
+    ]
+  },
+  "prettier": "@omnibytes/prettier-config"
+}
