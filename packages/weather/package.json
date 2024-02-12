@@ -15,8 +15,8 @@
     "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
-    "@omnibytes/api": "workspace:^0.1.0",
     "@omnibytes/logger": "workspace:^0.1.0",
+    "@omnibytes/trpc": "workspace:^0.1.0",
     "@omnibytes/ui": "workspace:^0.1.0",
     "@uidotdev/usehooks": "^2.4.1",
     "lucide-react": "^0.323.0"

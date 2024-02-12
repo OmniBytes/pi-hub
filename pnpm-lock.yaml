@@ -443,6 +443,9 @@ importers:
       '@omnibytes/api':
         specifier: workspace:^0.1.0
         version: link:../api
+      '@omnibytes/auth':
+        specifier: workspace:^0.1.0
+        version: link:../auth
       '@tanstack/react-query':
         specifier: ^5.18.1
         version: 5.18.1(react@18.2.0)
@@ -677,12 +680,12 @@ importers:
 
   packages/weather:
     dependencies:
-      '@omnibytes/api':
-        specifier: workspace:^0.1.0
-        version: link:../api
       '@omnibytes/logger':
         specifier: workspace:^0.1.0
         version: link:../logger
+      '@omnibytes/trpc':
+        specifier: workspace:^0.1.0
+        version: link:../trpc
       '@omnibytes/ui':
         specifier: workspace:^0.1.0
         version: link:../ui
