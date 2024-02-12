@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
 import { Fragment } from "react";
@@ -7,16 +11,24 @@ import { api } from "@omnibytes/trpc/react";
 
 export function WeatherCard() {
   const location = useGeolocation();
-  const haveLocation = !!location.latitude && !!location.longitude;
-
   const weather = api.weather.getInfo.useQuery(
     { lat: location.latitude, long: location.longitude },
     {
-      enabled: !haveLocation,
+      enabled: !location.loading,
     },
   );
 
-  console.log("get info", weather);
-
-  return <Fragment>weather</Fragment>;
+  return (
+    <Fragment>
+      {/* @ts-expect-error make helper */}
+      {weather?.data?.properties?.periods?.map((period: any) => {
+        return (
+          <Fragment key={period.number}>
+            <p> {period.temperature} F</p>
+            <p>{period.detailedForecast}</p>
+          </Fragment>
+        );
+      })}
+    </Fragment>
+  );
 }
