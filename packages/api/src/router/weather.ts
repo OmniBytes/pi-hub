@@ -12,12 +12,17 @@ export const postRouter = createTRPCRouter({
       const { weatherApi } = ctx;
       const point = `${input.lat},${input.long}`;
 
-      const resp = await weatherApi.GET("/points/{point}", {
+      const infoResp = await weatherApi.GET("/points/{point}", {
         params: {
           path: { point },
         },
       });
 
-      return handleApiResponse(resp);
+      const infoData = handleApiResponse(infoResp);
+      console.log("info", infoData);
+
+      // TODO: fetch url resp has
+
+      return infoData;
     }),
 });

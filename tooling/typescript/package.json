@@ -1,8 +1,9 @@
 {
-  "name": "@omnibytes/tsconfig",
+  "name": "@omnibytes/typescript",
   "private": true,
   "version": "0.1.0",
   "files": [
-    "base.json"
+    "tsconfig.json",
+    "types.ts"
   ]
 }

@@ -1,4 +1,4 @@
 {
-  "extends": "@omnibytes/tsconfig/base.json",
+  "extends": "@omnibytes/typescript/tsconfig.json",
   "include": ["routes"]
 }

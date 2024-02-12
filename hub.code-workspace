@@ -46,6 +46,16 @@
       "**/.next": true,
       "**/.turbo": true,
     },
+    "cSpell.words": [
+      "omnibytes",
+      "trpc",
+      "superjson",
+      "openapi",
+      "subrouters",
+      "unauthed",
+      "tsbuildinfo",
+      "vitest",
+    ],
   },
 
   "extensions": {

@@ -17,7 +17,7 @@
     "@omnibytes/eslint-config": "workspace:^0.2.0",
     "@omnibytes/prettier-config": "workspace:^0.1.0",
     "@omnibytes/tailwind-config": "workspace:^0.1.0",
-    "@omnibytes/tsconfig": "workspace:^0.1.0",
+    "@omnibytes/typescript": "workspace:^0.1.0",
     "@types/node": "^20.11.17",
     "eslint": "^8.56.0",
     "h3": "^1.10.1",
