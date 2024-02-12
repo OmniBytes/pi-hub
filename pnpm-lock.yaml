@@ -190,6 +190,9 @@ importers:
       '@omnibytes/validators':
         specifier: workspace:^0.1.0
         version: link:../../packages/validators
+      '@omnibytes/weather':
+        specifier: workspace:^0.1.0
+        version: link:../../packages/weather
       '@t3-oss/env-nextjs':
         specifier: ^0.9.2
         version: 0.9.2(typescript@5.3.3)(zod@3.22.4)
@@ -622,6 +625,58 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
+
+  packages/weather:
+    dependencies:
+      '@omnibytes/api':
+        specifier: workspace:^0.1.0
+        version: link:../api
+      '@omnibytes/logger':
+        specifier: workspace:^0.1.0
+        version: link:../logger
+      '@omnibytes/ui':
+        specifier: workspace:^0.1.0
+        version: link:../ui
+      '@uidotdev/usehooks':
+        specifier: ^2.4.1
+        version: 2.4.1(react-dom@18.2.0)(react@18.2.0)
+      lucide-react:
+        specifier: ^0.323.0
+        version: 0.323.0(react@18.2.0)
+    devDependencies:
+      '@omnibytes/eslint-config':
+        specifier: workspace:^0.2.0
+        version: link:../../tooling/eslint
+      '@omnibytes/prettier-config':
+        specifier: workspace:^0.1.0
+        version: link:../../tooling/prettier
+      '@omnibytes/tailwind-config':
+        specifier: workspace:^0.1.0
+        version: link:../../tooling/tailwind
+      '@omnibytes/typescript':
+        specifier: workspace:^0.1.0
+        version: link:../../tooling/typescript
+      '@types/react':
+        specifier: ^18.2.55
+        version: 18.2.55
+      eslint:
+        specifier: ^8.56.0
+        version: 8.56.0
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.1
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+      zod:
+        specifier: ^3.22.4
+        version: 3.22.4
 
   packages/weather-api:
     dependencies:
@@ -6789,6 +6844,17 @@ packages:
     dependencies:
       '@typescript-eslint/types': 6.21.0
       eslint-visitor-keys: 3.4.3
+    dev: false
+
+  /@uidotdev/usehooks@2.4.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-1I+RwWyS+kdv3Mv0Vmc+p0dPYH0DTRAo04HLyXReYBL9AeseDWUJyi4THuksBJcu9F0Pih69Ak150VDnqbVnXg==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /@ungap/structured-clone@1.2.0:
