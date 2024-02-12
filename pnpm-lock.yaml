@@ -435,6 +435,52 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
+  packages/trpc:
+    dependencies:
+      '@omnibytes/api':
+        specifier: workspace:^0.1.0
+        version: link:../api
+      '@tanstack/react-query':
+        specifier: ^5.18.1
+        version: 5.18.1(react@18.2.0)
+      '@trpc/client':
+        specifier: 11.0.0-next-beta.264
+        version: 11.0.0-next-beta.264(@trpc/server@11.0.0-next-beta.264)
+      '@trpc/react-query':
+        specifier: 11.0.0-next-beta.264
+        version: 11.0.0-next-beta.264(@tanstack/react-query@5.18.1)(@trpc/client@11.0.0-next-beta.264)(@trpc/server@11.0.0-next-beta.264)(react-dom@18.2.0)(react@18.2.0)
+      next:
+        specifier: ^14.1.0
+        version: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      superjson:
+        specifier: 2.2.1
+        version: 2.2.1
+    devDependencies:
+      '@omnibytes/eslint-config':
+        specifier: workspace:^0.2.0
+        version: link:../../tooling/eslint
+      '@omnibytes/prettier-config':
+        specifier: workspace:^0.1.0
+        version: link:../../tooling/prettier
+      '@omnibytes/typescript':
+        specifier: workspace:^0.1.0
+        version: link:../../tooling/typescript
+      '@types/react':
+        specifier: ^18.2.55
+        version: 18.2.55
+      eslint:
+        specifier: ^8.56.0
+        version: 8.56.0
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
   packages/ui:
     dependencies:
       '@hookform/resolvers':

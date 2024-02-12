@@ -1,0 +1,43 @@
+{
+  "name": "@omnibytes/trpc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./react": "./src/react.tsx",
+    "./server": "./src/server.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "quality:---": "------------------------------",
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit --pretty"
+  },
+  "dependencies": {
+    "@omnibytes/api": "workspace:^0.1.0",
+    "@tanstack/react-query": "^5.18.1",
+    "@trpc/client": "11.0.0-next-beta.264",
+    "@trpc/react-query": "11.0.0-next-beta.264",
+    "next": "^14.1.0",
+    "react": "18.2.0",
+    "superjson": "2.2.1"
+  },
+  "devDependencies": {
+    "@omnibytes/eslint-config": "workspace:^0.2.0",
+    "@omnibytes/prettier-config": "workspace:^0.1.0",
+    "@omnibytes/typescript": "workspace:^0.1.0",
+    "@types/react": "^18.2.55",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@omnibytes/eslint-config/base"
+    ]
+  },
+  "prettier": "@omnibytes/prettier-config"
+}
