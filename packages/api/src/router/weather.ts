@@ -30,23 +30,43 @@ export const weatherRouter = createTRPCRouter({
         throw new TRPCError({ code: "NOT_FOUND" });
       }
 
-      const weatherResp = await weatherApi.GET(
+      const path = {
+        // @ts-expect-error type better
+        wfo: infoData.properties.gridId,
+        // @ts-expect-error type better
+        x: infoData.properties.gridX,
+        // @ts-expect-error type better
+        y: infoData.properties.gridY,
+      };
+
+      // forcast, next 14 half days
+      const forcastResp = await weatherApi.GET(
         "/gridpoints/{wfo}/{x},{y}/forecast",
         {
           params: {
-            path: {
-              // @ts-expect-error type better
-              wfo: infoData.properties.gridId,
-              // @ts-expect-error type better
-              x: infoData.properties.gridX,
-              // @ts-expect-error type better
-              y: infoData.properties.gridY,
-            },
+            path,
           },
         },
       );
 
-      const weatherData = handleApiResponse(weatherResp);
-      return weatherData;
+      // TODO: make this an opt in filter, to not spam the service
+      // hourly
+      const hourlyForcast = await weatherApi.GET(
+        "/gridpoints/{wfo}/{x},{y}/forecast/hourly",
+        {
+          params: {
+            path,
+          },
+        },
+      );
+
+      const forcastData = handleApiResponse(forcastResp);
+      const hourlyData = handleApiResponse(hourlyForcast);
+
+      return {
+        info: infoData,
+        forcast: forcastData,
+        hourly: hourlyData,
+      };
     }),
 });

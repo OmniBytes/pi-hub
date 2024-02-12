@@ -21,7 +21,7 @@ export function WeatherCard() {
   return (
     <Fragment>
       {/* @ts-expect-error make helper */}
-      {weather?.data?.properties?.periods?.map((period: any) => {
+      {weather?.data?.forcast.properties?.periods?.map((period: any) => {
         return (
           <Fragment key={period.number}>
             <p> {period.temperature} F</p>
