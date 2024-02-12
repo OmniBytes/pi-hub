@@ -19,6 +19,7 @@
     "@omnibytes/api": "workspace:^0.1.0",
     "@omnibytes/auth": "workspace:^0.1.0",
     "@omnibytes/db": "workspace:^0.1.0",
+    "@omnibytes/trpc": "workspace:^0.1.0",
     "@omnibytes/ui": "workspace:^0.1.0",
     "@omnibytes/weather": "workspace:^0.1.0",
     "@omnibytes/validators": "workspace:^0.1.0",

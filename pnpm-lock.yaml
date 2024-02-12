@@ -184,6 +184,9 @@ importers:
       '@omnibytes/db':
         specifier: workspace:^0.1.0
         version: link:../../packages/db
+      '@omnibytes/trpc':
+        specifier: workspace:^0.1.0
+        version: link:../../packages/trpc
       '@omnibytes/ui':
         specifier: workspace:^0.1.0
         version: link:../../packages/ui

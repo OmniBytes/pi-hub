@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 
+import { api } from "@omnibytes/trpc/server";
 import { WeatherCard } from "@omnibytes/weather";
 
-import { api } from "~/trpc/server";
 import { AuthShowcase } from "./_components/auth-showcase";
 import {
   CreatePostForm,
