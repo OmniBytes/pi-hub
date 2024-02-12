@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 
@@ -11,11 +13,12 @@ export const weatherRouter = createTRPCRouter({
     .input(z.object({ lat: z.number().nullish(), long: z.number().nullish() }))
     .query(async ({ ctx, input }) => {
       const { weatherApi } = ctx;
-      const point = `${input.lat},${input.long}`;
-      if (!input.lat || !input.long) {
+
+      if (typeof input.lat !== "number" || typeof input.long !== "number") {
         throw new TRPCError({ code: "BAD_REQUEST" });
       }
 
+      const point = `${input.lat?.toFixed(4)},${input.long?.toFixed()}`;
       const infoResp = await weatherApi.GET("/points/{point}", {
         params: {
           path: { point },
@@ -23,10 +26,27 @@ export const weatherRouter = createTRPCRouter({
       });
 
       const infoData = handleApiResponse(infoResp);
-      console.log("info", infoData);
+      if (!infoData) {
+        throw new TRPCError({ code: "NOT_FOUND" });
+      }
 
-      // TODO: fetch url resp has
+      const weatherResp = await weatherApi.GET(
+        "/gridpoints/{wfo}/{x},{y}/forecast",
+        {
+          params: {
+            path: {
+              // @ts-expect-error type better
+              wfo: infoData.properties.gridId,
+              // @ts-expect-error type better
+              x: infoData.properties.gridX,
+              // @ts-expect-error type better
+              y: infoData.properties.gridY,
+            },
+          },
+        },
+      );
 
-      return infoData;
+      const weatherData = handleApiResponse(weatherResp);
+      return weatherData;
     }),
 });
