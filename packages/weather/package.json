@@ -1,0 +1,48 @@
+{
+  "name": "@omnibytes/weather",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "gen:ui": "pnpm dlx shadcn-ui add",
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit --pretty"
+  },
+  "dependencies": {
+    "@omnibytes/logger": "workspace:^0.1.0",
+    "@omnibytes/trpc": "workspace:^0.1.0",
+    "@omnibytes/ui": "workspace:^0.1.0",
+    "@uidotdev/usehooks": "^2.4.1",
+    "lucide-react": "^0.323.0"
+  },
+  "devDependencies": {
+    "@omnibytes/eslint-config": "workspace:^0.2.0",
+    "@omnibytes/prettier-config": "workspace:^0.1.0",
+    "@omnibytes/tailwind-config": "workspace:^0.1.0",
+    "@omnibytes/typescript": "workspace:^0.1.0",
+    "@types/react": "^18.2.55",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
+    "react": "18.2.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "zod": "^3.22.4"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "zod": "^3.22.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@omnibytes/eslint-config/base",
+      "@omnibytes/eslint-config/react"
+    ]
+  },
+  "prettier": "@omnibytes/prettier-config"
+}

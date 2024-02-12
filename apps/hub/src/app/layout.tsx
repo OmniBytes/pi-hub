@@ -4,12 +4,12 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 
+import { TRPCReactProvider } from "@omnibytes/trpc/react";
 import { cn } from "@omnibytes/ui";
 import { ThemeProvider, ThemeToggle } from "@omnibytes/ui/theme";
 import { Toaster } from "@omnibytes/ui/toaster";
 
 import { env } from "~/env";
-import { TRPCReactProvider } from "~/trpc/react";
 
 import "~/app/globals.css";
 

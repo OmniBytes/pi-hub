@@ -11,8 +11,10 @@ export const nextConfig = {
     "@omnibytes/api",
     "@omnibytes/auth",
     "@omnibytes/db",
+    "@omnibytes/db",
     "@omnibytes/ui",
     "@omnibytes/validators",
+    "@omnibytes/weather",
   ],
 
   /** We already do linting and type-checking as separate tasks in CI */

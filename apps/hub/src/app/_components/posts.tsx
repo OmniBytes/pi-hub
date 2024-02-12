@@ -3,6 +3,7 @@
 import { use } from "react";
 
 import type { RouterOutputs } from "@omnibytes/api";
+import { api } from "@omnibytes/trpc/react";
 import { cn } from "@omnibytes/ui";
 import { Button } from "@omnibytes/ui/button";
 import {
@@ -16,8 +17,6 @@ import {
 import { Input } from "@omnibytes/ui/input";
 // import { toast } from "@omnibytes/ui/toast";
 import { CreatePostSchema } from "@omnibytes/validators";
-
-import { api } from "~/trpc/react";
 
 export function CreatePostForm() {
   const form = useForm({
