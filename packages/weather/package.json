@@ -26,6 +26,7 @@
     "@omnibytes/prettier-config": "workspace:^0.1.0",
     "@omnibytes/tailwind-config": "workspace:^0.1.0",
     "@omnibytes/typescript": "workspace:^0.1.0",
+    "@total-typescript/ts-reset": "^0.5.1",
     "@types/react": "^18.2.55",
     "eslint": "^8.56.0",
     "prettier": "^3.2.5",
