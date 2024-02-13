@@ -1,2 +1,3 @@
 # @omnibytes/logger
+
 > undefined

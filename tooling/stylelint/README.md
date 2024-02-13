@@ -1,2 +1,3 @@
 # @omnibytes/stylelint-config
+
 > undefined

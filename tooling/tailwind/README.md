@@ -1,2 +1,3 @@
 # @omnibytes/tailwind-config
+
 > undefined
