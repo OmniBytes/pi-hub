@@ -1,0 +1,2 @@
+# @omnibytes/db
+> undefined

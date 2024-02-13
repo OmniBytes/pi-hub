@@ -1,0 +1,2 @@
+# @omnibytes/postcss-config
+> undefined

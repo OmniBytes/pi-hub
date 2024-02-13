@@ -1,0 +1,2 @@
+# @omnibytes/colors
+> undefined

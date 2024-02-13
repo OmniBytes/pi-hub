@@ -1,0 +1,2 @@
+# @omnibytes/auth
+> undefined
