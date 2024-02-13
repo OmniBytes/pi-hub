@@ -1,0 +1,3 @@
+# @omnibytes/weather
+
+> undefined

@@ -1,0 +1,2 @@
+# @omnibytes/typescript
+> undefined

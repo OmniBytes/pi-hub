@@ -1,0 +1,3 @@
+# @omnibytes/eslint-config
+
+> undefined

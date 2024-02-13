@@ -1,0 +1,3 @@
+# @omnibytes/next-config
+
+> undefined

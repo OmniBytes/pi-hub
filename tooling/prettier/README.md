@@ -1,0 +1,3 @@
+# @omnibytes/prettier-config
+
+> undefined
