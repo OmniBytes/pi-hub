@@ -44,8 +44,6 @@ export function WeatherCard() {
       </p>
 
       <Separator />
-
-      <p className="text-md font-extralight">{shortForcast}</p>
     </div>
   );
 }
