@@ -12,5 +12,18 @@
       "recommended/extends-repository-field"
     ]
   },
-  "constraints": {}
+  "constraints": {
+    "*": {
+      "disallow": ["deployable"]
+    },
+    "api": {
+      "disallow": ["ui"]
+    },
+    "data": {
+      "disallow": ["data"]
+    },
+    "config": {
+      "allow": ["config"]
+    }
+  }
 }

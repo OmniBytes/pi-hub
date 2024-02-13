@@ -20,6 +20,7 @@ env:
 
 jobs:
   lint:
+    name: 🧶 Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,10 +32,11 @@ jobs:
         shell: bash
         run: cp .env.example .env
 
-      - name: 🧶 Lint
+      - name: Lint
         run: pnpm lint && pnpm lint:ws
 
   format:
+    name: 💎 Format
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -42,10 +44,11 @@ jobs:
       - name: Setup
         uses: ./tooling/github/setup
 
-      - name: 💎 Format
+      - name: Format
         run: pnpm format
 
   style:
+    name: 🎩 Style
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -53,10 +56,11 @@ jobs:
       - name: Setup
         uses: ./tooling/github/setup
 
-      - name: 🎩 Style
+      - name: Style
         run: pnpm style
 
   type-check:
+    name: 🦺 Type Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -64,5 +68,20 @@ jobs:
       - name: Setup
         uses: ./tooling/github/setup
 
-      - name: 🦺 Type Check
+      - name: Type Check
         run: pnpm type-check
+
+  commonality:
+    name: 🦺 Commonality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./tooling/github/setup
+
+      - name: Check
+        run: pnpm comm:check
+
+      - name: Constrain
+        run: pnpm comm:constrain

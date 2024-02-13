@@ -26,6 +26,7 @@
     "db:studio": "pnpm -F db studio",
     "commonality:---": "-------------------------",
     "comm:check": "npx commonality check",
+    "comm:constrain": "npx commonality constrain",
     "comm:studio": "npx commonality studio"
   },
   "devDependencies": {
