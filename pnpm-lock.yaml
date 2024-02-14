@@ -695,6 +695,9 @@ importers:
       '@formkit/tempo':
         specifier: ^0.0.5
         version: 0.0.5
+      '@omnibytes/api':
+        specifier: workspace:^0.1.0
+        version: link:../api
       '@omnibytes/logger':
         specifier: workspace:^0.1.0
         version: link:../logger
