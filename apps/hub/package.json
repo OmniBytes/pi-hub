@@ -16,6 +16,7 @@
     "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
+    "@formkit/tempo": "^0.0.5",
     "@omnibytes/api": "workspace:^0.1.0",
     "@omnibytes/auth": "workspace:^0.1.0",
     "@omnibytes/db": "workspace:^0.1.0",

@@ -13,7 +13,7 @@ export default async function HomePage() {
     <div className="flex">
       <div className="flex w-32 flex-col items-center p-4">hub</div>
       <div className="h-screen w-screen rounded-l-xl bg-gradient-to-r from-fuchsia-600 to-pink-600 p-12 text-xl">
-        <div className="m-2 w-fit">
+        <div className="m-2 w-[300px]">
           <div style={style}>
             <WeatherCard />
           </div>

@@ -7,7 +7,9 @@ import { useGeolocation } from "@uidotdev/usehooks";
 import { api } from "@omnibytes/trpc/react";
 import { Separator } from "@omnibytes/ui/separator";
 
-import { WeatherIcon } from "./icons";
+import { WeatherIcon } from "../icons";
+import { CurrentTemp } from "./current-temp";
+import { HourlyForecast } from "./hourly-forecast";
 
 export function WeatherCard() {
   const location = useGeolocation();
@@ -23,27 +25,23 @@ export function WeatherCard() {
   const { city, state } = relativeLocation?.properties ?? {};
 
   // @ts-expect-error prop is there
-  const forcast = weather?.data?.forcast?.properties;
-  const now = forcast?.periods[0];
+  const forecast = weather?.data?.forecast?.properties;
+  const now = forecast?.periods[0];
   const isDaytime = now?.isDaytime as boolean;
   const temp = now?.temperature;
   const tempUnit = now?.temperatureUnit;
-  const shortForcast = now?.shortForecast as string;
+  const shortforecast = now?.shortForecast as string;
 
   if (weather.isLoading && !weather.data) return;
   return (
     <div className="flex flex-col items-center gap-2">
-      <WeatherIcon shortForecast={shortForcast} isDaytime={isDaytime} />
+      <WeatherIcon shortForecast={shortforecast} isDaytime={isDaytime} />
 
-      <p className="text-2xl font-bold">
-        {temp}° {tempUnit}
-      </p>
-
-      <p className="text-xl">
-        {city}, {state}
-      </p>
+      <CurrentTemp city={city} state={state} temp={temp} tempUnit={tempUnit} />
 
       <Separator />
+
+      <HourlyForecast hourlyInfo={weather?.data?.hourly} />
     </div>
   );
 }
