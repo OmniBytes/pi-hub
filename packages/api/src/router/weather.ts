@@ -15,6 +15,7 @@ export const weatherRouter = createTRPCRouter({
       const { weatherApi } = ctx;
 
       if (typeof input.lat !== "number" || typeof input.long !== "number") {
+        console.error("lat/long not given", input);
         throw new TRPCError({ code: "BAD_REQUEST" });
       }
 
@@ -27,6 +28,7 @@ export const weatherRouter = createTRPCRouter({
 
       const infoData = handleApiResponse(infoResp);
       if (!infoData) {
+        console.error("failed to fetch info", infoData);
         throw new TRPCError({ code: "NOT_FOUND" });
       }
 
