@@ -7,7 +7,8 @@ import { useGeolocation } from "@uidotdev/usehooks";
 import { api } from "@omnibytes/trpc/react";
 import { Separator } from "@omnibytes/ui/separator";
 
-import { WeatherIcon } from "./icons";
+import { WeatherIcon } from "../icons";
+import { CurrentTemp } from "./current-temp";
 
 export function WeatherCard() {
   const location = useGeolocation();
@@ -35,13 +36,7 @@ export function WeatherCard() {
     <div className="flex flex-col items-center gap-2">
       <WeatherIcon shortForecast={shortForcast} isDaytime={isDaytime} />
 
-      <p className="text-2xl font-bold">
-        {temp}° {tempUnit}
-      </p>
-
-      <p className="text-xl">
-        {city}, {state}
-      </p>
+      <CurrentTemp city={city} state={state} temp={temp} tempUnit={tempUnit} />
 
       <Separator />
     </div>

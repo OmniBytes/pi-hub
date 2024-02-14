@@ -52,6 +52,7 @@ export const weatherRouter = createTRPCRouter({
       );
 
       // TODO: make this an opt in filter, to not spam the service
+      // TODO: first attempt broke typing
       // hourly
       const hourlyForcast = await weatherApi.GET(
         "/gridpoints/{wfo}/{x},{y}/forecast/hourly",
