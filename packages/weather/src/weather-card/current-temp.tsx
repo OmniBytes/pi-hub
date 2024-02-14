@@ -16,7 +16,7 @@ export function CurrentTemp(props: CurrentTempProps) {
         {temp}° {tempUnit}
       </p>
 
-      <p className="text-xl">
+      <p className="text-center text-xl">
         {city}, {state}
       </p>
     </Fragment>

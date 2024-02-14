@@ -181,6 +181,9 @@ importers:
 
   apps/hub:
     dependencies:
+      '@formkit/tempo':
+        specifier: ^0.0.5
+        version: 0.0.5
       '@omnibytes/api':
         specifier: workspace:^0.1.0
         version: link:../../packages/api
@@ -689,6 +692,9 @@ importers:
 
   packages/weather:
     dependencies:
+      '@formkit/tempo':
+        specifier: ^0.0.5
+        version: 0.0.5
       '@omnibytes/logger':
         specifier: workspace:^0.1.0
         version: link:../logger
@@ -3749,6 +3755,10 @@ packages:
 
   /@floating-ui/utils@0.2.1:
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
+    dev: false
+
+  /@formkit/tempo@0.0.5:
+    resolution: {integrity: sha512-BmuTm7nOVPc3mWAxCK9js8jXo0QIQ+gGbmaHKSeDxfhOfttqqS0tQ8sKASvc9lE4PkGyMOepW1PZPSzWjkKi5A==}
     dev: false
 
   /@gar/promisify@1.1.3:

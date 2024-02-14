@@ -9,6 +9,7 @@ import { Separator } from "@omnibytes/ui/separator";
 
 import { WeatherIcon } from "../icons";
 import { CurrentTemp } from "./current-temp";
+import { HourlyForecast } from "./hourly-forecast";
 
 export function WeatherCard() {
   const location = useGeolocation();
@@ -39,6 +40,8 @@ export function WeatherCard() {
       <CurrentTemp city={city} state={state} temp={temp} tempUnit={tempUnit} />
 
       <Separator />
+
+      <HourlyForecast hourlyInfo={weather?.data?.hourly} />
     </div>
   );
 }
