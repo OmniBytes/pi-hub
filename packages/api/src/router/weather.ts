@@ -41,8 +41,8 @@ export const weatherRouter = createTRPCRouter({
         y: infoData.properties.gridY,
       };
 
-      // forcast, next 14 half days
-      const forcastResp = await weatherApi.GET(
+      // forecast, next 14 half days
+      const forecastResp = await weatherApi.GET(
         "/gridpoints/{wfo}/{x},{y}/forecast",
         {
           params: {
@@ -54,7 +54,7 @@ export const weatherRouter = createTRPCRouter({
       // TODO: make this an opt in filter, to not spam the service
       // TODO: first attempt broke typing
       // hourly
-      const hourlyForcast = await weatherApi.GET(
+      const hourlyforecast = await weatherApi.GET(
         "/gridpoints/{wfo}/{x},{y}/forecast/hourly",
         {
           params: {
@@ -63,12 +63,12 @@ export const weatherRouter = createTRPCRouter({
         },
       );
 
-      const forcastData = handleApiResponse(forcastResp);
-      const hourlyData = handleApiResponse(hourlyForcast);
+      const forecastData = handleApiResponse(forecastResp);
+      const hourlyData = handleApiResponse(hourlyforecast);
 
       return {
         info: infoData,
-        forcast: forcastData,
+        forecast: forecastData,
         hourly: hourlyData,
       };
     }),
