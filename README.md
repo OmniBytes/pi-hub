@@ -1,28 +1,10 @@
 # Pi-Hub
 
-> **Note**
-> Due to high demand, this repo now uses the `app` directory with some new experimental features. If you want to use the more traditional `pages` router, [check out the repo before the update](https://github.com/t3-oss/create-t3-turbo/tree/414aff131ca124573e721f3779df3edb64989fd4).
-
-> **Note**
-> OAuth deployments are now working for preview deployments. Read [deployment guide](https://github.com/t3-oss/create-t3-turbo#auth-proxy) and [check out the source](./apps/auth-proxy) to learn more!
-
-## Installation
-
-There are two ways of initializing an app using the `create-t3-turbo` starter. You can either use this repository as a template:
-
-![use-as-template](https://github.com/t3-oss/create-t3-turbo/assets/51714798/bb6c2e5d-d8b6-416e-aeb3-b3e50e2ca994)
-
-or use Turbo's CLI to init your project (use PNPM as package manager):
-
-```bash
-npx create-turbo@latest -e https://github.com/t3-oss/create-t3-turbo
-```
+> Smart display ui targeted for a raspberry pi and computer monitor.
 
 ## About
 
-Ever wondered how to migrate your T3 application into a monorepo? Stop right here! This is the perfect starter repo to get you running with the perfect stack!
-
-It uses [Turborepo](https://turborepo.org) and contains:
+> Generated using t3-turbo
 
 ```text
 .github
@@ -40,7 +22,7 @@ apps
   |   ├─ Navigation using Expo Router
   |   ├─ Tailwind using Nativewind
   |   └─ Typesafe API calls using tRPC
-  └─ next.js
+  └─ hub
       ├─ Next.js 14
       ├─ React 18
       ├─ Tailwind CSS
@@ -51,18 +33,36 @@ packages
   ├─ auth
   |   └─ Authentication using next-auth. **NOTE: Only for Next.js app, not Expo**
   ├─ db
-  |   └─ Typesafe db calls using Drizzle & Planetscale
-  └─ ui
+  |   └─ Typesafe db calls using Drizzle & Planetscal
+  ├─ logger
+  |   └─ Utility and factory to log
+  ├─ trpc
+  |   └─ TRPC clients for react and server
+  ├─ ui
+  |   └─ UI package using using shadcn-ui
+  ├─ weather
+  |   └─ Feature package using react + ui
+  └─ weather-api
       └─ Start of a UI package for the webapp using shadcn-ui
 tooling
+  ├─ colors
+  |   └─ shared theme colors
   ├─ eslint
   |   └─ shared, fine-grained, eslint presets
+  ├─ github
+  |   └─ shared setup action
+  ├─ next
+  |   └─ shared next.js configuration
+  ├─ postcss
+  |   └─ shared postcss configuration
   ├─ prettier
   |   └─ shared prettier configuration
+  ├─ stylelint
+  |   └─ shared stylelint configuration
   ├─ tailwind
   |   └─ shared tailwind configuration
   └─ typescript
-      └─ shared tsconfig you can extend from
+      └─ shared tsconfig you can extend from + shared types
 ```
 
 > In this template, we use `@omnibytes` as a placeholder for package names. As a user, you might want to replace it with your own organization or project name. You can use find-and-replace to change all the instances of `@omnibytes` to something like `@my-company` or `@project-name`.
