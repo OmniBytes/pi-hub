@@ -43,7 +43,7 @@ packages
   ├─ weather
   |   └─ Feature package using react + ui
   └─ weather-api
-      └─ Start of a UI package for the webapp using shadcn-ui
+      └─ auto typed fetch client from open-api spec
 tooling
   ├─ colors
   |   └─ shared theme colors
