@@ -17,11 +17,11 @@
   "dependencies": {
     "@expo/metro-config": "^0.17.4",
     "@shopify/flash-list": "1.6.3",
-    "@tanstack/react-query": "^5.20.2",
+    "@tanstack/react-query": "^5.20.5",
     "@trpc/client": "11.0.0-next-beta.264",
     "@trpc/react-query": "11.0.0-next-beta.264",
     "@trpc/server": "11.0.0-next-beta.264",
-    "expo": "~50.0.6",
+    "expo": "~50.0.7",
     "expo-constants": "~15.4.5",
     "expo-linking": "~6.2.2",
     "expo-router": "~3.4.7",

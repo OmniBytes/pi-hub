@@ -15,7 +15,7 @@
     "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
-    "@auth/drizzle-adapter": "^0.6.3",
+    "@auth/drizzle-adapter": "^0.7.0",
     "@omnibytes/db": "workspace:^0.1.0",
     "@t3-oss/env-nextjs": "^0.9.2",
     "next": "^14.1.0",
