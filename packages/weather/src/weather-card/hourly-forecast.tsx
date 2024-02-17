@@ -8,8 +8,10 @@ interface HourlyForecastProps {
 }
 
 export function HourlyForecast(props: HourlyForecastProps) {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { hourlyInfo } = props;
 
+  // @ts-expect-error it is there
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   const periods = (hourlyInfo?.properties?.periods ?? []) as {
     temperature: number;
