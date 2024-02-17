@@ -1,7 +1,7 @@
-import type { FetchResponse } from "openapi-fetch";
+import type { FetchOptions, FetchResponse } from "openapi-fetch";
 import { TRPCError } from "@trpc/server";
 
-export function handleApiResponse<T>(resp: FetchResponse<T>) {
+export function handleApiResponse<T>(resp: FetchResponse<T, FetchOptions<T>>) {
   if (resp.data) {
     return resp.data;
   }

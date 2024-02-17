@@ -45,6 +45,9 @@
     "extends": [
       "@omnibytes/eslint-config/base",
       "@omnibytes/eslint-config/react"
+    ],
+    "ignorePatterns": [
+      "**/types.ts"
     ]
   },
   "prettier": "@omnibytes/prettier-config"
