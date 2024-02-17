@@ -29,6 +29,7 @@
     "./hover-card": "./src/hover-card.tsx",
     "./input": "./src/input.tsx",
     "./label": "./src/label.tsx",
+    "./list": "./src/typography/list.tsx",
     "./menubar": "./src/menubar.tsx",
     "./navigation-menu": "./src/navigation-menu.tsx",
     "./pagination": "./src/pagination.tsx",
