@@ -31,11 +31,16 @@ apps
   |   ├─ Navigation using Expo Router
   |   ├─ Tailwind using Nativewind
   |   └─ Typesafe API calls using tRPC
-  └─ hub
+  ├─ hub
+  |   ├─ Next.js 14
+  |   ├─ React 18
+  |   ├─ Tailwind CSS
+  |   └─ E2E Typesafe API Server & Client
+  └─ www
       ├─ Next.js 14
       ├─ React 18
       ├─ Tailwind CSS
-      └─ E2E Typesafe API Server & Client
+      └─ MDX blog
 packages
   ├─ api
   |   └─ tRPC v11 router definition
