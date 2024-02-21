@@ -8,7 +8,6 @@ interface HourlyForecastProps {
 }
 
 export function HourlyForecast(props: HourlyForecastProps) {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { hourlyInfo } = props;
 
   // @ts-expect-error it is there

@@ -1,0 +1,31 @@
+{
+  "name": "Omnibytes",
+  "short_name": "omnibytes",
+
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "orientation": "portrait",
+
+  "icons": [
+    {
+      "src": "t3-icon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Test",
+      "short_name": "Test",
+      "description": "test desc",
+      "url": "/test?source=pwa",
+      "icons": [{ "src": "t3-icon.svg", "sizes": "96x96" }]
+    }
+  ]
+}
