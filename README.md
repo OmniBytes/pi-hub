@@ -79,8 +79,6 @@ tooling
       └─ shared tsconfig you can extend from + shared types
 ```
 
-> In this template, we use `@omnibytes` as a placeholder for package names. As a user, you might want to replace it with your own organization or project name. You can use find-and-replace to change all the instances of `@omnibytes` to something like `@my-company` or `@project-name`.
-
 ## Quick Start
 
 > **Note**
