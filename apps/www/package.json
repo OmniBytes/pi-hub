@@ -16,7 +16,7 @@
     "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
-    "@formkit/tempo": "^0.0.9",
+    "@formkit/tempo": "^0.0.10",
     "@hbsnow/rehype-sectionize": "^1.0.7",
     "@omnibytes/ui": "workspace:^0.1.0",
     "@t3-oss/env-nextjs": "^0.9.2",
