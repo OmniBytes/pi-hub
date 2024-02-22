@@ -16,7 +16,7 @@ export default async function BlogPage() {
 
         return (
           <Link key={post.slug} href={`/blog/${post.slug}`}>
-            <div className="border-gray border-b border-solid">
+            <div className="border-b border-solid border-primary">
               <Title className="mb-2">{post.data.title}</Title>
 
               <Text>{post.data.description}</Text>

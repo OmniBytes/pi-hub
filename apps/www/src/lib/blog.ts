@@ -1,6 +1,7 @@
 //! this is server only code
 import fs from "fs";
 import { join } from "path";
+import { format } from "@formkit/tempo";
 import matter from "gray-matter";
 
 interface Author {
@@ -47,7 +48,10 @@ export async function getPostBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf-8");
 
   const { content, data } = matter(fileContents);
-  // TODO: if date in future, dont return
+  //? if date in future, dont return post
+  if (data.date > format(new Date(), "YYYY-MM-DDTHH:mm:ss")) {
+    return;
+  }
 
   return { content, data, slug } as Post;
 }
@@ -61,9 +65,11 @@ export async function getAllPosts() {
   );
 
   //? sort by date in desc order
-  const posts = unsortedPosts.sort((firstPost, secondPost) =>
-    firstPost.data.date > secondPost.data.date ? -1 : 1,
-  );
+  const posts = unsortedPosts
+    .filter(Boolean)
+    .sort((firstPost, secondPost) =>
+      firstPost.data.date > secondPost.data.date ? -1 : 1,
+    );
 
   return posts;
 }

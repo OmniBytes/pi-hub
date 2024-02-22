@@ -10,7 +10,6 @@ export async function markdownToHtml(markdown: string) {
       format: "mdx",
       rehypePlugins: [
         rehypeAutolinkHeadings,
-
         rehypeSectionize,
         rehypeSlug,
         rehypeToc,
