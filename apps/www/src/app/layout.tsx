@@ -37,6 +37,11 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  // userScalable: false,
+
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -59,6 +64,8 @@ export default function RootLayout(props: { children: React.ReactNode }) {
           <div className="min-h-screen bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-50">
             <div className="mx-auto max-w-2xl px-4 py-10">
               <header>
+                <ThemeToggle />
+
                 <div className="flex items-center justify-between">
                   <nav className="ml-auto space-x-6 text-sm font-medium">
                     <Link href="/">Home</Link>
@@ -69,9 +76,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
                 </div>
               </header>
 
-              <main className={styles.main}>
-                <div className={styles.center}>{props.children}</div>
-              </main>
+              <main className={styles.main}>{props.children}</main>
 
               <footer>
                 <div className={styles.grid}>
@@ -113,10 +118,6 @@ export default function RootLayout(props: { children: React.ReactNode }) {
                 </div>
               </footer>
             </div>
-          </div>
-
-          <div className="absolute bottom-4 right-4">
-            <ThemeToggle />
           </div>
 
           <Toaster />
