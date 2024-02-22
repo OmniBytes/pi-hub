@@ -13,9 +13,11 @@ interface MdxContentProps {
 export function MdxContent(props: MdxContentProps) {
   const { content } = props;
 
+  const components = {};
+
   return (
     <article className="prose py-6 dark:prose-invert">
-      <MDXRemote {...content} />
+      <MDXRemote {...content} components={components} />
     </article>
   );
 }

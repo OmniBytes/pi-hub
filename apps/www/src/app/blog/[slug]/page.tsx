@@ -28,7 +28,7 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
     return notFound();
   }
 
-  const title = `${post.data.title} | Omnibytes`;
+  const title = `${post.content.frontmatter.title} | Omnibytes`;
 
   return {
     openGraph: {

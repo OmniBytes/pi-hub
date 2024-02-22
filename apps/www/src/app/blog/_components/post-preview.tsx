@@ -12,7 +12,7 @@ interface PostPreviewProps {
 
 export function PostPreview(props: PostPreviewProps) {
   const { post } = props;
-  const { title, description, date } = post.data;
+  const { title, description, date } = post.content.frontmatter;
 
   const href = `/blog/${post.slug}`;
   const formattedDate = format(parse(date), { date: "long" });
