@@ -9,7 +9,7 @@ export function PostView(props: PostPreviewProps) {
   const { post } = props;
 
   return (
-    <div>
+    <div className="">
       <MdxContent content={post.content} />
     </div>
   );
