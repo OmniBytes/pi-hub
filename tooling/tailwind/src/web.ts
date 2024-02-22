@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss";
+import containerQueries from "@tailwindcss/container-queries";
+import typography from "@tailwindcss/typography";
 import animate from "tailwindcss-animate";
 
 import { addColorVar } from "./add-color-vars";
@@ -37,5 +39,5 @@ export default {
       },
     },
   },
-  plugins: [animate, addColorVar],
+  plugins: [animate, containerQueries, typography, addColorVar],
 } satisfies Config;
