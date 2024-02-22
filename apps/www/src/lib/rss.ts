@@ -1,3 +1,4 @@
+//! this is server only code
 import { Feed } from "feed";
 
 import { getAllPosts } from "~/lib/blog";
@@ -21,7 +22,7 @@ export async function generateRssFeed() {
     feedLinks: {
       json: `${BLOG_ROUTE}/feed/json`,
       atom: `${BLOG_ROUTE}/feed/atom`,
-      rss: `${BLOG_ROUTE}/feed/rss`,
+      rss2: `${BLOG_ROUTE}/feed/rss`,
     },
     author: {
       name: "Omnibytes",

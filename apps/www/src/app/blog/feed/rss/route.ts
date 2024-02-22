@@ -1,12 +1,13 @@
 import { generateRssFeed } from "~/lib/rss";
 
 export async function GET(_request: Request) {
-  const feed = await generateRssFeed();
+  const _feed = await generateRssFeed();
 
-  const response = new Response(feed.rss2(), {
+  const response = new Response("", {
     status: 200,
     statusText: "ok",
   });
+
   response.headers.append("content-type", "text/xml");
 
   return response;
