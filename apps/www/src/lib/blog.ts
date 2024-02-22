@@ -1,8 +1,11 @@
 //! this is server only code
 import fs from "fs";
 import { join } from "path";
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { format } from "@formkit/tempo";
 import matter from "gray-matter";
+
+import { markdownToHtml } from "~/lib/mdx";
 
 interface Author {
   name: string;
@@ -12,7 +15,10 @@ interface Author {
 }
 
 export interface Post {
-  content: string;
+  content: MDXRemoteSerializeResult<
+    Record<string, unknown>,
+    Record<string, unknown>
+  >;
   slug: string;
 
   data: {
@@ -42,18 +48,17 @@ export async function getPostBySlug(slug: string) {
   "use server";
 
   const realSlug = slug.replace(/\.mdx$/, "");
-
-  //? filter out post with dates that are in the future
   const fullPath = join(blogDirectory, `${realSlug}.mdx`);
   const fileContents = fs.readFileSync(fullPath, "utf-8");
 
   const { content, data } = matter(fileContents);
-  //? if date in future, dont return post
   if (data.date > format(new Date(), "YYYY-MM-DDTHH:mm:ss")) {
+    //? if date in future, dont return post
     return;
   }
 
-  return { content, data, slug: realSlug } as Post;
+  const htmlContent = await markdownToHtml(content);
+  return { content: htmlContent, data, slug: realSlug } as Post;
 }
 
 export async function getAllPosts() {
@@ -64,7 +69,7 @@ export async function getAllPosts() {
     slugs.map(async (slug) => await getPostBySlug(slug)),
   );
 
-  //? sort by date in desc order
+  //? sort by date in desc order, rm undefined
   const posts = unsortedPosts
     .filter(Boolean)
     .sort((firstPost, secondPost) =>

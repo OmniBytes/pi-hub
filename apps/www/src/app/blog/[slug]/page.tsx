@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { PostView } from "~/app/blog/_components/post-view";
 import { getAllPosts, getPostBySlug } from "~/lib/blog";
-import { markdownToHtml } from "~/lib/mdx-to-html";
-import { MdxContent } from "../_components/mdx-content";
 
 interface PageProps {
   params: {
@@ -19,8 +18,7 @@ export default async function BlogPostPage(props: PageProps) {
     return notFound();
   }
 
-  const content = await markdownToHtml(post.content);
-  return <MdxContent content={content} />;
+  return <PostView post={post} />;
 }
 
 export async function generateMetadata(props: PageProps): Promise<Metadata> {
