@@ -32,22 +32,24 @@ export async function generateRssFeed() {
   });
 
   posts.forEach((post) => {
+    const meta = post.content.frontmatter;
+
     feed.addItem({
-      title: post.data.title,
+      title: meta.title,
       id: post.slug,
       link: `${BLOG_ROUTE}/${post.slug}`,
-      description: post.data.description,
+      description: meta.description,
       content: post.content.compiledSource,
       author: [
         {
-          name: post.data.author.name,
+          name: meta.author.name,
           //   email: "janedoe@example.com",
-          link: `https://twitter.com/${post.data.author.twitterHandle}`,
+          link: `https://twitter.com/${meta.author.twitterHandle}`,
         },
       ],
       contributor: [],
-      date: new Date(post.data.date),
-      image: post.data.previewImage,
+      date: new Date(meta.date),
+      image: meta.previewImage,
     });
   });
 

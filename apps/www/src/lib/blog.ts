@@ -3,7 +3,6 @@ import fs from "fs";
 import { join } from "path";
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { format } from "@formkit/tempo";
-import matter from "gray-matter";
 
 import { markdownToHtml } from "~/lib/mdx";
 
@@ -18,20 +17,21 @@ export interface Post {
   content: MDXRemoteSerializeResult<
     Record<string, unknown>,
     Record<string, unknown>
-  >;
-  slug: string;
+  > & {
+    frontmatter: {
+      author: Author;
 
-  data: {
-    author: Author;
+      title: string;
+      description: string;
+      date: string;
+      previewImage: string | undefined;
 
-    title: string;
-    description: string;
-    date: string;
-    previewImage: string | undefined;
-
-    tags: string[];
-    emojis: string[];
+      tags: string[];
+      emojis: string[];
+    };
   };
+
+  slug: string;
 }
 
 const blogDirectory = join(process.cwd(), "/src/app/blog/_posts");
@@ -51,14 +51,14 @@ export async function getPostBySlug(slug: string) {
   const fullPath = join(blogDirectory, `${realSlug}.mdx`);
   const fileContents = fs.readFileSync(fullPath, "utf-8");
 
-  const { content, data } = matter(fileContents);
-  if (data.date > format(new Date(), "YYYY-MM-DDTHH:mm:ss")) {
+  const mdxContent = await markdownToHtml(fileContents);
+  const meta = mdxContent.frontmatter as Post["content"]["frontmatter"];
+  if (meta.date > format(new Date(), "YYYY-MM-DDTHH:mm:ss")) {
     //? if date in future, dont return post
     return;
   }
 
-  const htmlContent = await markdownToHtml(content);
-  return { content: htmlContent, data, slug: realSlug } as Post;
+  return { content: mdxContent, slug: realSlug } as Post;
 }
 
 export async function getAllPosts() {
@@ -73,7 +73,9 @@ export async function getAllPosts() {
   const posts = unsortedPosts
     .filter(Boolean)
     .sort((firstPost, secondPost) =>
-      firstPost.data.date > secondPost.data.date ? -1 : 1,
+      firstPost.content.frontmatter.date > secondPost.content.frontmatter.date
+        ? -1
+        : 1,
     );
 
   return posts;
