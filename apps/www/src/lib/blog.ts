@@ -11,7 +11,7 @@ interface Author {
   githubHandle: string | undefined;
 }
 
-interface Post {
+export interface Post {
   content: string;
   slug: string;
 
