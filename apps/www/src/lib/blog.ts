@@ -53,7 +53,7 @@ export async function getPostBySlug(slug: string) {
     return;
   }
 
-  return { content, data, slug } as Post;
+  return { content, data, slug: realSlug } as Post;
 }
 
 export async function getAllPosts() {
