@@ -1,10 +1,5 @@
-// import nPwa from "next-pwa";
-import rehypeSectionize from "@hbsnow/rehype-sectionize";
-import mdx from "@next/mdx";
 import _jiti from "jiti";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypeSlug from "rehype-slug";
-import rehypeToc from "rehype-toc";
+import nPwa from "next-pwa";
 
 import { nextConfig } from "@omnibytes/next-config";
 
@@ -16,26 +11,11 @@ jiti("./src/env");
 /** @type {import("next").NextConfig} */
 const config = {
   ...nextConfig,
-
-  pageExtensions: ["ts", "tsx", "mdx"],
-  experimental: {
-    mdxRs: true,
-  },
 };
 
-// const withPWA = nPwa({
-//   dest: "public",
-//   disable: process.env.NODE_ENV === "development",
-// });
-
-const withMDX = mdx({
-  extension: /\.mdx?$/,
-  rehypePlugins: [
-    rehypeAutolinkHeadings,
-    rehypeSectionize,
-    rehypeSlug,
-    rehypeToc,
-  ],
+const withPWA = nPwa({
+  dest: "public",
+  disable: process.env.NODE_ENV === "development",
 });
 
-export default withMDX(config);
+export default withPWA(config);
