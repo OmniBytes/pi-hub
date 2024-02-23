@@ -1,5 +1,5 @@
 ---
-title: "Hello World!"
+title: "Hello World 🌎"
 description: "the good 'ol inaugural start to an application"
 date: "2024-02-21T01:00:00"
 previewImage: "/images/blog/hello-world/preview.png"
@@ -8,7 +8,6 @@ tags:
   - misc
 
 emojis:
-  - 🌎
   - 🥇
 
 author:
@@ -18,8 +17,6 @@ author:
 ---
 
 <hr />
-
-# Hello World 🌎
 
 Until now, trying to style an article, document, or blog post with Tailwind has been a tedious task that required a keen eye for typography and a lot of complex custom CSS.
 
@@ -179,13 +176,48 @@ I almost forgot to mention links, like [this link to the Tailwind CSS website](h
 
 We even included table styles, check it out:
 
-| Wrestler                | Origin       | Finisher           |
-| ----------------------- | ------------ | ------------------ |
-| Bret "The Hitman" Hart  | Calgary, AB  | Sharpshooter       |
-| Stone Cold Steve Austin | Austin, TX   | Stone Cold Stunner |
-| Randy Savage            | Sarasota, FL | Elbow Drop         |
-| Vader                   | Boulder, CO  | Vader Bomb         |
-| Razor Ramon             | Chuluota, FL | Razor's Edge       |
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Wrestler</TableHead>
+      <TableHead>Origin</TableHead>
+      <TableHead>Finisher</TableHead>
+    </TableRow>
+  </TableHeader>
+
+  <TableBody>
+    <TableRow>
+      <TableCell>Bret "The Hitman" Hart</TableCell>
+      <TableCell>Calgary, AB</TableCell>
+      <TableCell>Sharpshooter</TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>Razor Ramon</TableCell>
+      <TableCell>Austin, TX</TableCell>
+      <TableCell>Stone Cold Stunner</TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>Randy Savage</TableCell>
+      <TableCell>Sarasota, FL</TableCell>
+      <TableCell>Elbow Drop</TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>Vader</TableCell>
+      <TableCell>Boulder, CO</TableCell>
+      <TableCell>Vader Bomb</TableCell>
+    </TableRow>
+
+    <TableRow>
+      <TableCell>Razor Ramon</TableCell>
+      <TableCell>Chuluota, FL</TableCell>
+      <TableCell>Razor's Edge</TableCell>
+    </TableRow>
+
+  </TableBody>
+</Table>
 
 We also need to make sure inline code looks good, like if I wanted to talk about `<span>` elements or tell you the good news about `@tailwindcss/typography`.
 
