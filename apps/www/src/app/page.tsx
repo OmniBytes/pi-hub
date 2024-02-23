@@ -4,7 +4,7 @@ import { cn } from "@omnibytes/ui";
 import { buttonVariants } from "@omnibytes/ui/button";
 
 const GITHUB_URL = "https://github.com/omnibytes/pi-hub";
-const TWITTER_URL = "https://twitter.com/omnibytes";
+const TWITTER_URL = "https://twitter.com/funkstyr";
 
 export default async function RootPage() {
   return (
