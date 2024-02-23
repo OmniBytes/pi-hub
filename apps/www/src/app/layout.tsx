@@ -6,13 +6,15 @@ import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 
 import { cn } from "@omnibytes/ui";
-import { ThemeProvider, ThemeToggle } from "@omnibytes/ui/theme";
+import { ThemeProvider } from "@omnibytes/ui/theme";
 import { Toaster } from "@omnibytes/ui/toaster";
 
 import { env } from "~/env";
 import styles from "./page.module.css";
 
 import "~/app/globals.css";
+
+import { ThemeToggle } from "./_components/theme-toggle";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -63,7 +65,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="min-h-screen bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-50">
             <div className="mx-auto max-w-2xl px-4 py-10">
-              <header>
+              <header className="flex content-center justify-between pb-10">
                 <ThemeToggle />
 
                 <div className="flex items-center justify-between">
