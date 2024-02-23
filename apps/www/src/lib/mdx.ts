@@ -17,7 +17,7 @@ export async function markdownToHtml(markdown: string) {
         rehypeAutolinkHeadings,
         rehypeSectionize,
         rehypeSlug,
-        rehypeToc,
+        [rehypeToc, { headings: ["h2", "h3"] }],
       ],
     },
   });
