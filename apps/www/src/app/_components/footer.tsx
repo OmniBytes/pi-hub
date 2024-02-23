@@ -15,11 +15,7 @@ export function Footer() {
           <Text>Posts about the journey</Text>
         </Link>
 
-        <Link href="/about" className={styles.col}>
-          <Title order="two">About</Title>
-
-          <Text>Learn more about the journey</Text>
-        </Link>
+        <div className={styles.col} />
 
         <Link href="/projects" className={styles.col}>
           <Title order="two">Projects</Title>
