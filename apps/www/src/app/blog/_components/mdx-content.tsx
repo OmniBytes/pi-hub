@@ -12,6 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "@omnibytes/ui/table";
+import { Title } from "@omnibytes/ui/title";
 
 interface MdxContentProps {
   content: MDXRemoteSerializeResult<
@@ -36,6 +37,15 @@ export function MdxContent(props: MdxContentProps) {
 
   return (
     <article className="prose py-6 dark:prose-invert">
+      <Title>{content.frontmatter.title as string}</Title>
+
+      <Image
+        src={content.frontmatter.previewImage as string}
+        alt="blog preview image"
+        width="718"
+        height="404"
+      />
+
       <MDXRemote {...content} components={components} />
     </article>
   );
