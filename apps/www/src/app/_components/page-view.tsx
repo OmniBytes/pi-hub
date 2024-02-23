@@ -9,7 +9,7 @@ export function PageView(props: PageViewProps) {
   const { page } = props;
 
   return (
-    <div className="">
+    <div className="prose py-6 dark:prose-invert">
       <MdxContent content={page.content} />
     </div>
   );
