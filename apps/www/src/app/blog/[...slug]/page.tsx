@@ -6,13 +6,13 @@ import { getAllPosts, getPostBySlug } from "~/lib/blog";
 
 interface PageProps {
   params: {
-    slug: string;
+    slug: string[];
   };
 }
 
 export default async function BlogPostPage(props: PageProps) {
   const { params } = props;
-  const post = await getPostBySlug(params.slug);
+  const post = await getPostBySlug(params.slug.join("/"));
 
   if (!post) {
     return notFound();
@@ -22,7 +22,7 @@ export default async function BlogPostPage(props: PageProps) {
 }
 
 export async function generateMetadata(props: PageProps): Promise<Metadata> {
-  const post = await getPostBySlug(props.params.slug);
+  const post = await getPostBySlug(props.params.slug.join("/"));
 
   if (!post) {
     return notFound();
@@ -40,7 +40,10 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
 export async function generateStaticParams() {
   const posts = await getAllPosts();
 
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
+  return posts.map(
+    (post) =>
+      ({
+        slug: [post.slug],
+      }) as PageProps["params"],
+  );
 }
