@@ -21,7 +21,7 @@ const titleVariants = cva("scroll-m-20", {
 });
 
 export interface TitleProps extends VariantProps<typeof titleVariants> {
-  children: string;
+  children: React.ReactNode;
   className?: string;
 }
 
