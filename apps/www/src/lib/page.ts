@@ -27,8 +27,6 @@ const pagesDirectory = join(process.cwd(), "/src/app/_pages");
 export async function getPageBySlug(slug: string) {
   "use server";
 
-  console.log("get by slug", slug);
-
   const realSlug = slug.replace(/\.mdx$/, "");
   const fullPath = join(pagesDirectory, `${realSlug}.mdx`);
   const fileContents = fs.readFileSync(fullPath, "utf-8");
