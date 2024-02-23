@@ -9,28 +9,22 @@ export function Footer() {
   return (
     <footer>
       <div className={styles.grid}>
-        <Link href="/projects" className={styles.col}>
-          <Title order="two">
-            Projects <span>-&gt;</span>
-          </Title>
-
-          <Text>See our projects</Text>
-        </Link>
-
         <Link href="/blog" className={styles.col}>
-          <Title order="two">
-            Blog <span>-&gt;</span>
-          </Title>
+          <Title order="two">Blog</Title>
 
-          <Text>Posts about this journey</Text>
+          <Text>Posts about the journey</Text>
         </Link>
 
         <Link href="/about" className={styles.col}>
-          <Title order="two">
-            About <span>-&gt;</span>
-          </Title>
+          <Title order="two">About</Title>
 
           <Text>Learn more about the journey</Text>
+        </Link>
+
+        <Link href="/projects" className={styles.col}>
+          <Title order="two">Projects</Title>
+
+          <Text>See our projects</Text>
         </Link>
       </div>
     </footer>
