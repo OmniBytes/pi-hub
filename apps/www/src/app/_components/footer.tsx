@@ -9,12 +9,7 @@ export function Footer() {
   return (
     <footer>
       <div className={styles.grid}>
-        <Link
-          href="https://hub.omnibytes.io"
-          className={styles.col}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="/projects" className={styles.col}>
           <Title order="two">
             Projects <span>-&gt;</span>
           </Title>
@@ -22,12 +17,7 @@ export function Footer() {
           <Text>See our projects</Text>
         </Link>
 
-        <Link
-          href="/blog"
-          className={styles.col}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="/blog" className={styles.col}>
           <Title order="two">
             Blog <span>-&gt;</span>
           </Title>
@@ -35,12 +25,7 @@ export function Footer() {
           <Text>Posts about this journey</Text>
         </Link>
 
-        <Link
-          href="/about"
-          className={styles.col}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="/about" className={styles.col}>
           <Title order="two">
             About <span>-&gt;</span>
           </Title>
