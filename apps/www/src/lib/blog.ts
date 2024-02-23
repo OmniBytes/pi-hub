@@ -36,14 +36,6 @@ export interface Post {
 
 const blogDirectory = join(process.cwd(), "/src/app/blog/_posts");
 
-async function getPostSlugs() {
-  "use server";
-
-  return fs
-    .readdirSync(blogDirectory, { withFileTypes: true })
-    .map((file) => file.name);
-}
-
 export async function getPostBySlug(slug: string) {
   "use server";
 
@@ -59,6 +51,14 @@ export async function getPostBySlug(slug: string) {
   }
 
   return { content: mdxContent, slug: realSlug } as Post;
+}
+
+async function getPostSlugs() {
+  "use server";
+
+  return fs
+    .readdirSync(blogDirectory, { withFileTypes: true })
+    .map((file) => file.name);
 }
 
 export async function getAllPosts() {
