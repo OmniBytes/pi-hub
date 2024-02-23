@@ -20,7 +20,7 @@ const textVariants = cva("", {
 });
 
 export interface TextProps extends VariantProps<typeof textVariants> {
-  children: string;
+  children: React.ReactNode;
   className?: string;
 }
 
