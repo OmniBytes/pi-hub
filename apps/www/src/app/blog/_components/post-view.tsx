@@ -12,8 +12,7 @@ interface PostViewProps {
 export function PostView(props: PostViewProps) {
   const { post } = props;
   if (!post) return;
-
-  const imageSource = "post.content.frontmatter.previewImage";
+  const imageSource = post.content.frontmatter.previewImage;
 
   return (
     <article className="prose py-6 dark:prose-invert">
