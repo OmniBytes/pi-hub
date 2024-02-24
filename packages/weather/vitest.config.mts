@@ -9,12 +9,13 @@ export default defineConfig({
     exclude: [...configDefaults.exclude],
 
     environment: "jsdom",
-    setupFiles: "./__tests__/web.setup.ts",
+    globals: true,
+    setupFiles: "src/__tests__/setup.ts",
 
     coverage: {
       enabled: true,
       provider: "v8",
-      reporter: ["json"],
+      reporter: ["json", "html"],
     },
   },
 });

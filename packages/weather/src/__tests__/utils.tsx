@@ -2,6 +2,8 @@ import type { RenderOptions } from "@testing-library/react";
 import type { FC, ReactElement, ReactNode } from "react";
 import { render as rtlRender } from "@testing-library/react";
 
+import { TRPCReactProvider } from "@omnibytes/trpc/react";
+
 interface Component {
   children: ReactNode;
 }
@@ -12,7 +14,7 @@ interface RenderWithOptions extends RenderOptions {
 
 //? use this to wrap needed providers for testing
 export function Wrapper(props: Component) {
-  return props.children;
+  return <TRPCReactProvider>{props.children}</TRPCReactProvider>;
 }
 
 function render(ui: ReactElement, options: RenderWithOptions = {}) {

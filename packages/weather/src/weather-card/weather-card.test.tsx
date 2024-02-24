@@ -2,7 +2,7 @@
 import { describe, expect, test, vi } from "vitest";
 
 import { WeatherCard } from ".";
-import { render } from "../__tests__/utils";
+import { render, screen } from "../__tests__/utils";
 
 vi.mock("@uidotdev/usehooks", async (importOriginal) => {
   const og = await importOriginal();
@@ -13,8 +13,9 @@ vi.mock("@uidotdev/usehooks", async (importOriginal) => {
     ...og,
 
     useGeolocation: vi.fn().mockImplementation(() => ({
-      latitude: "",
-      longitude: "",
+      latitude: "1",
+      longitude: "2",
+      loading: false,
     })),
   };
 });
@@ -69,6 +70,6 @@ describe("WeatherCard", () => {
   test("render current temp", () => {
     render(<WeatherCard />);
 
-    expect(false).toBeTruthy();
+    expect(screen.findByText("78° F")).toBeInTheDocument();
   });
 });

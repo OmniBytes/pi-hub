@@ -3,6 +3,6 @@
   "compilerOptions": {
     "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
   },
-  "include": ["*.ts", "src", "vitest.confi.mts"],
+  "include": ["*.ts", "src", "vitest.config.mts"],
   "exclude": ["node_modules", "coverage", "builed", "dist", ".turbo"]
 }
