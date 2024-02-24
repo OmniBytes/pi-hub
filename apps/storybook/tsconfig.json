@@ -1,0 +1,8 @@
+{
+  "extends": "@omnibytes/typescript/tsconfig.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
+  },
+  "include": [".", "stories"],
+  "exclude": ["node_modules"]
+}
