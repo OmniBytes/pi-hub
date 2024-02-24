@@ -1,3 +1,0 @@
-# @omnibytes/vite-config
-
-> undefined
