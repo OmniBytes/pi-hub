@@ -1,5 +1,20 @@
-import { defineConfig, mergeConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
+import { configDefaults, defineConfig } from "vitest/config";
 
-import { webConfig } from "@omnibytes/vite-config";
+export default defineConfig({
+  plugins: [react()],
 
-export default mergeConfig(webConfig, defineConfig({}));
+  test: {
+    include: ["**/*.{test,spec,unit}.{ts,tsx}"],
+    exclude: [...configDefaults.exclude],
+
+    environment: "jsdom",
+    setupFiles: "./__tests__/web.setup.ts",
+
+    coverage: {
+      enabled: true,
+      provider: "v8",
+      reporter: ["json"],
+    },
+  },
+});
