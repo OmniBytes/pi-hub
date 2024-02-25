@@ -2,6 +2,10 @@ import Link from "next/link";
 
 import { cn } from "@omnibytes/ui";
 import { buttonVariants } from "@omnibytes/ui/button";
+import {
+  TypewriterEffect,
+  TypewriterEffectSmooth,
+} from "@omnibytes/ui/typewritter-effect";
 
 const GITHUB_URL = "https://github.com/omnibytes/pi-hub";
 const TWITTER_URL = "https://twitter.com/funkstyr";
@@ -23,9 +27,20 @@ export default async function RootPage() {
             Omnibytes
           </h1>
 
-          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            So eclectic, must be electric ⚡
-          </p>
+          <TypewriterEffectSmooth
+            cursorClassName="bg-orange-400 dark:bg-orange-400"
+            words={[
+              { text: "So", className: "text-sm text-muted-foreground" },
+              { text: "eclectic,", className: "text-sm text-muted-foreground" },
+              { text: "must", className: "text-sm text-muted-foreground" },
+              { text: "be", className: "text-sm text-muted-foreground" },
+              {
+                text: "electric",
+                className: "text-orange-400 dark:text-orange-400 text-sm",
+              },
+              { text: "⚡" },
+            ]}
+          />
 
           <div className="space-x-4">
             <Link
