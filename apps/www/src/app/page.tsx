@@ -30,15 +30,18 @@ export default async function RootPage() {
           <TypewriterEffectSmooth
             cursorClassName="bg-orange-400 dark:bg-orange-400"
             words={[
-              { text: "So", className: "text-sm text-muted-foreground" },
-              { text: "eclectic,", className: "text-sm text-muted-foreground" },
-              { text: "must", className: "text-sm text-muted-foreground" },
-              { text: "be", className: "text-sm text-muted-foreground" },
+              { text: "So", className: "text-md text-muted-foreground" },
+              {
+                text: "eclectic,",
+                className: "text-md text-muted-foreground text-bold",
+              },
+              { text: "must", className: "text-md text-muted-foreground" },
+              { text: "be", className: "text-md text-muted-foreground" },
               {
                 text: "electric",
-                className: "text-orange-400 dark:text-orange-400 text-sm",
+                className: "text-orange-400 dark:text-orange-400 text-md",
               },
-              { text: "⚡" },
+              { text: "⚡", className: "text-md" },
             ]}
           />
 
