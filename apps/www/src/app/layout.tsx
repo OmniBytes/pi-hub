@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       : "http://localhost:3000",
   ),
   title: "Omnibytes",
-  description: "",
+  description: "a dev hub for funkstyr",
   openGraph: {
     title: "Omnibytes",
     description: "",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  // userScalable: false,
+  maximumScale: 5,
+  userScalable: true,
 
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
