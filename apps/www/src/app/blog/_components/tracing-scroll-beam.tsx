@@ -63,12 +63,12 @@ export const TracingScrollBeam = ({
       ref={ref}
       className={cn("relative mx-auto h-full w-full max-w-4xl", className)}
     >
-      <div className="absolute -left-6 top-3">
+      <div className="absolute -left-8 top-3">
         <svg
           viewBox={`0 0 20 ${svgHeight}`}
           width="20"
           height={svgHeight} // Set the SVG height
-          className="hidden lg:block"
+          className="lg:block"
           aria-hidden="true"
         >
           <motion.path
