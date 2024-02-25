@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 import { Title } from "@omnibytes/ui/title";
+import { TracingScrollBeam } from "@omnibytes/ui/tracing-scroll-beam";
 
 import type { Post } from "~/lib/blog";
 import { MdxContent } from "~/app/blog/_components/mdx-content";
-import { TracingScrollBeam } from "./tracing-scroll-beam";
 
 interface PostViewProps {
   post: Post;
