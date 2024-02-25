@@ -8,7 +8,7 @@ interface CurrentTempProps {
 }
 
 export function CurrentTemp(props: CurrentTempProps) {
-  const { city, state, temp, tempUnit } = props;
+  const { city, state, temp = "78", tempUnit = "F" } = props;
 
   return (
     <Fragment>

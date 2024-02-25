@@ -32,7 +32,6 @@ export function WeatherCard() {
   const tempUnit = now?.temperatureUnit;
   const shortforecast = now?.shortForecast as string;
 
-  if (weather.isLoading && !weather.data) return;
   return (
     <div className="flex flex-col items-center gap-2">
       <WeatherIcon shortForecast={shortforecast} isDaytime={isDaytime} />
