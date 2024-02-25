@@ -8,13 +8,6 @@ const postcssConfig = {
       stage: 1,
     },
 
-    autoprefixer: {
-      "postcss-nested": {},
-      "postcss-simple-vars": {
-        variables: {},
-      },
-    },
-
     tailwindcss: {},
   },
 };
