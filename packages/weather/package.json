@@ -59,7 +59,8 @@
       "@omnibytes/eslint-config/react"
     ],
     "ignorePatterns": [
-      "**/types.ts"
+      "**/types.ts",
+      "**/coverage/*.js"
     ]
   },
   "prettier": "@omnibytes/prettier-config"

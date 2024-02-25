@@ -18,5 +18,5 @@
     "noUncheckedIndexedAccess": true,
     "strictNullChecks": true
   },
-  "exclude": ["node_modules", "build", "dist", ".next", ".expo"]
+  "exclude": ["node_modules", "build", "dist", ".next", ".expo", "coverage"]
 }
