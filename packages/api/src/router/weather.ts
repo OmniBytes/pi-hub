@@ -41,6 +41,8 @@ export const weatherRouter = createTRPCRouter({
         y: infoData.properties.gridY,
       };
 
+      // TODO: promise.all
+      // TODO: first attempt broke typing
       // forecast, next 14 half days
       const forecastResp = await weatherApi.GET(
         "/gridpoints/{wfo}/{x},{y}/forecast",
@@ -52,7 +54,6 @@ export const weatherRouter = createTRPCRouter({
       );
 
       // TODO: make this an opt in filter, to not spam the service
-      // TODO: first attempt broke typing
       // hourly
       const hourlyforecast = await weatherApi.GET(
         "/gridpoints/{wfo}/{x},{y}/forecast/hourly",

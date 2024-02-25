@@ -36,6 +36,8 @@ const config = {
     ".next",
     "dist",
     "pnpm-lock.yaml",
+    "**/coverge/*.js",
+    "**/types.ts",
   ],
   reportUnusedDisableDirectives: true,
 };

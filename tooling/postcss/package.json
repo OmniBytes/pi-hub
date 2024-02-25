@@ -11,7 +11,6 @@
     "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^9.4.0",
