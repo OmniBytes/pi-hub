@@ -5,6 +5,7 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
+    "./moving-border": "./src/effects/moving-border.tsx",
     "./tracing-scroll-beam": "./src/effects/tracing-scroll-beam.tsx",
     "./typewritter-effect": "./src/effects/typewritter-effect.tsx",
     "./block-quote": "./src/typography/block-quote.tsx",
