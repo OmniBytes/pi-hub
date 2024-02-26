@@ -1,0 +1,95 @@
+---
+title: "Why a Monorepo?"
+description: "that sounds complicated"
+date: "2024-02-25T01:00:00"
+
+tags:
+  - turborepo
+  - monorepo
+
+emojis:
+  - 🏢
+
+author:
+  name: "Michael Funk"
+  twitterHandle: "funkstyr"
+  githubHandle: "funkstyr"
+---
+
+<hr />
+
+[What is a monorepo?](https://monorepo.tools/)
+
+## The Beginning
+
+I first became intrigued with monorepos in 2019 when I was working for [AVB Marketing](https://www.avbmarketing.com/)
+where we had a multi-tenant React application for over 700 appliance and furniture store across the country.
+Why was I intersted in monorepos at this time? Well, our application had some main areas: csm, catalog,
+product, the cart + checkout, and blog pages. But some of our members only used the cms and blog pages yet
+their users were downloading a lot of code for the other pages that they would never even know existed.
+I wanted to break each one of those areas into their own package and have a slim and ecommerce version.
+
+At that time, the main players were Nx and Lerna and I got about as far as a POC or our current app alongside
+documenation using [Docusaurus](https://docusaurus.io/). It wasn't until about 2 years ago where we implemented
+Turborepo at [Highlight](https://www.letshighlight.com/) to split our application into two. We had two major users
+of the application: an account executive and a customer. We started with a single React application with a bunch
+of if statements based on role to two applications with some shared components. We had a single sprint to get this done,
+and with this being our first interactions with monoreps were under quite the durress.
+
+## The First Implementation
+
+It wasn't until recently where we have started to revamp how we use Turborepo based on a recent talk at the last
+Next.js Conference 2023. We had been using the same setup as our original foray and had been feeling some pain points
+with CI time(mainly unit test time). We had 2 applications, and 2 shared packages; one for ui components and one for an
+api client. This talk sparked something in our team to double down on the monorepo and we quickly started to create
+small packages for new features and put shared configs into their own packages too.
+
+## Inspiration
+
+[Infintely Scalable Applications](https://www.chernicki.com/blog/infinitely-scalable-applications)
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/Bq3kOftoRqE?si=G2toHUXRVG6UiDpb"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+
+[Alec](https://twitter.com/alecchernicki) also was recently on the LogRocket podcast as well:
+
+<iframe
+  style="border-radius:12px"
+  src="https://open.spotify.com/embed/episode/4QPEQESaCvlkPemT2C0X0T?utm_source=generator&theme=0"
+  width="100%"
+  height="152"
+  frameBorder="0"
+  allowfullscreen=""
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+  loading="lazy"
+></iframe>
+
+Between these amazing pieces of content, there had been something awaken inside of me. I immediately starting breaking
+out every config into it's own package: eslint, next, postcss, prettier, stylelint, typescript. The patterns
+I was following were the ones set by [t3](https://github.com/t3-oss/create-t3-turbo); the turborepo flavor
+of the popular t3 stack from [Theo](https://twitter.com/t3dotgg). I got my team to start doing new feature
+work in their own packages. This weird thing started to happen, it felt like we were gamifying writing new code.
+
+## How is it Helpful?
+
+I have very strong nuerodivergent tendencies which means I binge a new app idea for a couple days, weeks, months
+at best and then fizzle out to never return. Well, with a monorepo, when I get a new app idea and start to work
+on it, I am not starting from scratch. I have all of the ui components and utilities from my previous adventures.
+
+I also find it helpfull when working in a specific package, it helps keep the blinders on and trying to keep that
+package's public api as slim as possible. I have some packages where all they do is export the view component
+imported into a Next.js page. Everything else is defined within the package and is only used within the package.
+
+## What Now
+
+I invision myself working in this repo for awhile, trying to get the first iteration of [Pi-Hub](https://hub.omnibytes.io)
+out with a local temperature and wallpaper feature. This blog will hopefully serve as an outlet
+for my learnings and rants along the way. I also have yet another idea brewing, one that is not new, but one
+that I wish to return to for an online card game we played all the time for swimming and water polo.
