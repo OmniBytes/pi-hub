@@ -18,20 +18,24 @@ author:
 
 <hr />
 
-[What is a monorepo?](https://monorepo.tools/)
+<a href="https://monorepo.tools/" target="_blank" rel="noopener noreferrer">
+  What is a monorepo?
+</a>
 
 ## The Beginning
 
-I first became intrigued with monorepos in 2019 when I was working for [AVB Marketing](https://www.avbmarketing.com/)
-where we had a multi-tenant React application for over 700 appliance and furniture store across the country.
-Why was I intersted in monorepos at this time? Well, our application had some main areas: csm, catalog,
-product, the cart + checkout, and blog pages. But some of our members only used the cms and blog pages yet
-their users were downloading a lot of code for the other pages that they would never even know existed.
-I wanted to break each one of those areas into their own package and have a slim and ecommerce version.
+I first became intrigued with monorepos in 2019 when I was working for <a href="https://www.avbmarketing.com/" target="\_blank" rel="noopener noreferrer">AVB Marketing</a>
+where we had a multi-tenant React application for over 700 appliance and furniture
+store across the country. Why was I intersted in monorepos at this time? Well, our
+application had some main areas: csm, catalog, product, the cart + checkout, and
+blog pages. But some of our members only used the cms and blog pages yet their users
+were downloading a lot of code for the other pages that they would never even know
+existed. I wanted to break each one of those areas into their own package and have
+a slim and ecommerce version.
 
 At that time, the main players were Nx and Lerna and I got about as far as a POC or our current app alongside
-documenation using [Docusaurus](https://docusaurus.io/). It wasn't until about 2 years ago where we implemented
-Turborepo at [Highlight](https://www.letshighlight.com/) to split our application into two. We had two major users
+documenation using <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>. It wasn't until about 2 years ago where we implemented
+Turborepo at <a href="https://www.letshighlight.com/" target="_blank" rel="noopener noreferrer">Highlight</a> to split our application into two. We had two major users
 of the application: an account executive and a customer. We started with a single React application with a bunch
 of if statements based on role to two applications with some shared components. We had a single sprint to get this done,
 and with this being our first interactions with monoreps were under quite the durress.
@@ -46,35 +50,39 @@ small packages for new features and put shared configs into their own packages t
 
 ## Inspiration
 
-[Infintely Scalable Applications](https://www.chernicki.com/blog/infinitely-scalable-applications)
+<a
+  href="https://www.chernicki.com/blog/infinitely-scalable-applications"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Infintely Scalable Applications
+</a>
 
 <iframe
-  width="560"
-  height="315"
+  width="100%"
+  height="300"
   src="https://www.youtube.com/embed/Bq3kOftoRqE?si=G2toHUXRVG6UiDpb"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen
-></iframe>
-
-[Alec](https://twitter.com/alecchernicki) also was recently on the LogRocket podcast as well:
-
-<iframe
-  style="border-radius:12px"
-  src="https://open.spotify.com/embed/episode/4QPEQESaCvlkPemT2C0X0T?utm_source=generator&theme=0"
-  width="100%"
-  height="152"
-  frameBorder="0"
-  allowfullscreen=""
-  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
   loading="lazy"
 ></iframe>
 
+<iframe
+  src="https://open.spotify.com/embed/episode/4QPEQESaCvlkPemT2C0X0T?utm_source=generator&theme=0"
+  width="100%"
+  height="152"
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+  loading="lazy"
+  title="spotify player"
+></iframe>
+
+<br />
+
 Between these amazing pieces of content, there had been something awaken inside of me. I immediately starting breaking
 out every config into it's own package: eslint, next, postcss, prettier, stylelint, typescript. The patterns
-I was following were the ones set by [t3](https://github.com/t3-oss/create-t3-turbo); the turborepo flavor
-of the popular t3 stack from [Theo](https://twitter.com/t3dotgg). I got my team to start doing new feature
+I was following were the ones set by <a href="https://github.com/t3-oss/create-t3-turbo" target="_blank" rel="noopener noreferrer">T3</a>; the turborepo flavor
+of the popular t3 stack from <a href="https://twitter.com/t3dotgg" target="_blank" rel="noopener noreferrer">Theo</a>. I got my team to start doing new feature
 work in their own packages. This weird thing started to happen, it felt like we were gamifying writing new code.
 
 ## How is it Helpful?
@@ -89,7 +97,7 @@ imported into a Next.js page. Everything else is defined within the package and 
 
 ## What Now
 
-I invision myself working in this repo for awhile, trying to get the first iteration of [Pi-Hub](https://hub.omnibytes.io)
+I invision myself working in this repo for awhile, trying to get the first iteration of <a href="https://hub.omnibytes.io" target="_blank" rel="noopener noreferrer">Pi-Hub</a>
 out with a local temperature and wallpaper feature. This blog will hopefully serve as an outlet
 for my learnings and rants along the way. I also have yet another idea brewing, one that is not new, but one
 that I wish to return to for an online card game we played all the time for swimming and water polo.
