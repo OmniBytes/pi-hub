@@ -33,12 +33,13 @@ were downloading a lot of code for the other pages that they would never even kn
 existed. I wanted to break each one of those areas into their own package and have
 a slim and ecommerce version.
 
-At that time, the main players were Nx and Lerna and I got about as far as a POC or our current app alongside
-documenation using <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>. It wasn't until about 2 years ago where we implemented
-Turborepo at <a href="https://www.letshighlight.com/" target="_blank" rel="noopener noreferrer">Highlight</a> to split our application into two. We had two major users
-of the application: an account executive and a customer. We started with a single React application with a bunch
-of if statements based on role to two applications with some shared components. We had a single sprint to get this done,
-and with this being our first interactions with monoreps were under quite the durress.
+At that time, the main players were Nx and Lerna and I got about as far as a POC for our current app alongside
+documenation using <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>.
+It wasn't until about 2 years ago where we implemented Turborepo at <a href="https://www.letshighlight.com/" target="_blank" rel="noopener noreferrer">Highlight</a>
+to split our application into two. We had two major users of the application: an account executive and a customer.
+We started with a single React application with a bunch of if statements based on role to two applications with
+some shared components. We had a single sprint to get this done, and with this being our first interactions with
+monoreps were under quite the durress.
 
 ## The First Implementation
 
@@ -81,11 +82,12 @@ small packages for new features and put shared configs into their own packages t
 
 <br />
 
-Between these amazing pieces of content, there had been something awaken inside of me. I immediately starting breaking
+Between these amazing pieces of content, there had been something awakened inside of me. I immediately starting breaking
 out every config into it's own package: eslint, next, postcss, prettier, stylelint, typescript. The patterns
-I was following were the ones set by <a href="https://github.com/t3-oss/create-t3-turbo" target="_blank" rel="noopener noreferrer">T3</a>; the turborepo flavor
-of the popular t3 stack from <a href="https://twitter.com/t3dotgg" target="_blank" rel="noopener noreferrer">Theo</a>. I got my team to start doing new feature
-work in their own packages. This weird thing started to happen, it felt like we were gamifying writing new code.
+I was following were the ones set by <a href="https://github.com/t3-oss/create-t3-turbo" target="_blank" rel="noopener noreferrer">T3</a>;
+the turborepo flavor of the popular t3 stack from <a href="https://twitter.com/t3dotgg" target="_blank" rel="noopener noreferrer">Theo</a> & team.
+I got my team to start doing new feature work in their own packages. This weird thing started to happen, it felt
+like we were gamifying writing new code.
 
 ## How is it Helpful?
 
