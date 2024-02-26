@@ -26,7 +26,7 @@ author:
 
 I first became intrigued with monorepos in 2019 when I was working for <a href="https://www.avbmarketing.com/" target="\_blank" rel="noopener noreferrer">AVB Marketing</a>
 where we had a multi-tenant React application for over 700 appliance and furniture
-store across the country. Why was I intersted in monorepos at this time? Well, our
+stores across the country. Why was I intersted in monorepos at this time? Well, our
 application had some main areas: csm, catalog, product, the cart + checkout, and
 blog pages. But some of our members only used the cms and blog pages yet their users
 were downloading a lot of code for the other pages that they would never even know
@@ -35,6 +35,7 @@ a slim and ecommerce version.
 
 At that time, the main players were Nx and Lerna and I got about as far as a POC for our current app alongside
 documenation using <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>.
+
 It wasn't until about 2 years ago where we implemented Turborepo at <a href="https://www.letshighlight.com/" target="_blank" rel="noopener noreferrer">Highlight</a>
 to split our application into two. We had two major users of the application: an account executive and a customer.
 We started with a single React application with a bunch of if statements based on role to two applications with
@@ -45,7 +46,9 @@ monoreps were under quite the durress.
 
 It wasn't until recently where we have started to revamp how we use Turborepo based on a recent talk at the last
 Next.js Conference 2023. We had been using the same setup as our original foray and had been feeling some pain points
-with CI time(mainly unit test time). We had 2 applications, and 2 shared packages; one for ui components and one for an
+with CI time(mainly unit test time).
+
+We had 2 applications, and 2 shared packages; one for ui components and one for an
 api client. This talk sparked something in our team to double down on the monorepo and we quickly started to create
 small packages for new features and put shared configs into their own packages too.
 
