@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { format } from "@formkit/tempo";
 import { Github, Twitter } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@omnibytes/ui/avatar";
@@ -30,6 +31,8 @@ export function PostHeader(props: PostViewProps) {
   const githubUrl = `https://github.com/${postAuthor.githubHandle}`;
   const imgSrc = `${githubUrl}.png?size=50`;
 
+  const date = format(post.content.frontmatter.date, "short");
+
   return (
     <Fragment>
       <Title className="mb-0">{post.content.frontmatter.title}</Title>
@@ -47,15 +50,21 @@ export function PostHeader(props: PostViewProps) {
         <div className="flex gap-4 pt-6">
           {postAuthor.twitterHandle && (
             <Link href={twitterUrl} target="_blank">
-              <Twitter size={20} />
+              <Twitter size={24} />
             </Link>
           )}
 
           {postAuthor.githubHandle && (
             <Link href={githubUrl} target="_blank">
-              <Github size={20} />
+              <Github size={24} />
             </Link>
           )}
+
+          <div className="inline-block h-6 w-0.5 self-stretch bg-green-500 opacity-100 dark:opacity-50" />
+
+          <Text className="align-top [&:not(:first-child)]:mt-[-2px]">
+            {date}
+          </Text>
         </div>
       </div>
 
