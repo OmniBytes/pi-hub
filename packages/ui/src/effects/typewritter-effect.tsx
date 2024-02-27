@@ -29,7 +29,7 @@ export const TypewriterEffect = ({
   const isInView = useInView(scope);
   useEffect(() => {
     if (isInView) {
-      animate(
+      void animate(
         "span",
         {
           display: "inline-block",
