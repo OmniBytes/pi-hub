@@ -32,8 +32,8 @@
   "devDependencies": {
     "@omnibytes/prettier-config": "workspace:^0.1.0",
     "@turbo/gen": "^1.12.4",
-    "commonality": "^0.2.56",
-    "commonality-checks-recommended": "^0.0.33",
+    "commonality": "^0.2.58",
+    "commonality-checks-recommended": "^0.0.35",
     "prettier": "^3.2.5",
     "turbo": "^1.12.4",
     "typescript": "^5.3.3"
