@@ -13,14 +13,14 @@
   "dependencies": {
     "postcss": "^8.4.35",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-preset-env": "^9.4.0",
+    "postcss-preset-env": "^9.5.0",
     "postcss-simple-vars": "^7.0.1",
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
     "@omnibytes/prettier-config": "workspace:^0.1.0",
     "@omnibytes/typescript": "workspace:^0.1.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "prettier": "@omnibytes/prettier-config"
 }

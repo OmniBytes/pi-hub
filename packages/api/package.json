@@ -27,9 +27,9 @@
     "@omnibytes/prettier-config": "workspace:^0.1.0",
     "@omnibytes/typescript": "workspace:^0.1.0",
     "eslint": "^8.57.0",
-    "openapi-fetch": "^0.9.2",
+    "openapi-fetch": "^0.9.3",
     "prettier": "^3.2.5",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "eslintConfig": {
     "root": true,

@@ -31,12 +31,12 @@
   },
   "devDependencies": {
     "@omnibytes/prettier-config": "workspace:^0.1.0",
-    "@turbo/gen": "^1.12.4",
-    "commonality": "^0.2.58",
-    "commonality-checks-recommended": "^0.0.35",
+    "@turbo/gen": "^1.12.5",
+    "commonality": "^0.2.59",
+    "commonality-checks-recommended": "^0.0.36",
     "prettier": "^3.2.5",
-    "turbo": "^1.12.4",
-    "typescript": "^5.3.3"
+    "turbo": "^1.12.5",
+    "typescript": "^5.4.2"
   },
   "prettier": "@omnibytes/prettier-config"
 }
